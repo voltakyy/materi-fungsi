@@ -1100,6 +1100,41 @@ td strong{color:var(--ink)}
 .q-answer[hidden]{display:none}
 .q-answer .steps{margin:0}
 
+/* ---------- tandai selesai ---------- */
+
+.done-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:32px 0 0;
+  padding-top:20px;
+  border-top:1px dashed var(--line);
+}
+.mark-done{gap:8px}
+.mark-done::before{
+  content:"";
+  width:9px;
+  height:9px;
+  border:1px solid var(--edge);
+  border-radius:50%;
+  display:inline-block;
+}
+.mark-done.is-done{
+  background:var(--green-soft);
+  border-color:rgba(47,107,79,.3);
+  color:var(--green);
+}
+.mark-done.is-done::before{
+  background:var(--green);
+  border-color:var(--green);
+}
+.done-note{
+  font-family:var(--mono);
+  font-size:.64rem;
+  letter-spacing:.05em;
+  color:var(--faint);
+}
+
 /* ---------- responsif ---------- */
 
 @media (max-width:1080px){
@@ -1133,6 +1168,13 @@ td strong{color:var(--ink)}
   .np.next{text-align:left;align-items:flex-start}
   .example-body,.panel{padding:16px}
   .inti{padding:18px 18px 18px 20px}
+}
+
+@media (max-width:560px){
+  table{min-width:0;font-size:.88rem}
+  th,td{padding:9px 11px}
+  th{font-size:.6rem;letter-spacing:.07em}
+  .formula-body{font-size:.95rem;padding:16px 12px}
 }
 
 @media (max-width:420px){

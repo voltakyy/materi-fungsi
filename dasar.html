@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Definisi &amp; notasi fungsi — materi-fungsi</title>
+<meta name="description" content="Fungsi adalah relasi yang tidak boleh bercabang. Bongkar definisi f: A → B, arti f(x), dan cara membaca notasi fungsi tanpa tertukar dengan perkalian.">
+<meta name="theme-color" content="#f7f6f0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<link rel="stylesheet" href="assets/tema.css">
+</head>
+<body>
+<a class="skip" href="#utama">Lompat ke isi</a>
+
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="index.html" aria-label="materi-fungsi, beranda">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="5" fill="#fffefa"/>
+        <g stroke="#1f4e79" stroke-opacity=".2" stroke-width=".8">
+          <path d="M0 8h32M0 16h32M0 24h32M8 0v32M16 0v32M24 0v32"/>
+        </g>
+        <path d="M4 27c5 0 6-18 11-18s5 12 9 12" fill="none" stroke="#1f4e79" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="15" cy="9" r="2.6" fill="#b03a26" stroke="#fffefa" stroke-width="1.2"/>
+      </svg>
+      <span class="brand-word">fungsi<i>.</i></span>
+    </a>
+
+    <nav class="topnav" aria-label="Navigasi utama">
+      <a href="dasar.html" aria-current="page">Dasar</a>
+      <a href="bentuk.html">Bentuk</a>
+      <a href="lanjut.html">Lanjut</a>
+      <a href="latihan.html">Latihan</a>
+      <a href="ringkasan.html">Ringkasan</a>
+    </nav>
+
+    <span class="readchip" data-readchip title="Progres bagian yang sudah ditandai">
+      <span class="bar"><span></span></span>
+      <b>0/15</b> selesai
+    </span>
+  </div>
+</header>
+
+<main id="utama" class="shell">
+  <div class="page">
+
+    <aside class="rail" aria-label="Isi bab 01">
+      <p class="rail-title">Bab 01 · Dasar</p>
+      <ol>
+        <li><a href="#definisi" data-for="01"><span class="n">01</span><span>Definisi &amp; notasi</span></a></li>
+      </ol>
+      <p class="rail-note">Baca berurutan. Tiap bagian ditutup contoh dan satu cek pemahaman singkat.</p>
+    </aside>
+
+    <div class="content">
+
+      <div class="page-head">
+        <div class="crumbs">
+          <a href="index.html">Beranda</a><span>/</span><span>Bab 01 · Dasar</span>
+        </div>
+        <p class="kicker">Bab 01 · bagian 01 dari 15</p>
+        <h1>Apa itu fungsi, sebenarnya?</h1>
+        <p class="lede">Sebelum rumus, grafik, dan invers, ada satu janji sederhana yang harus dipegang: satu input tidak boleh menghasilkan dua jawaban berbeda. Dari janji itu, semua definisi lain dibangun.</p>
+      </div>
+
+      <section class="sec" id="definisi" data-lesson="01">
+
+        <div class="sec-head">
+          <span class="sec-no">01</span>
+          <div>
+            <h2>Definisi &amp; notasi fungsi</h2>
+            <p class="sec-sub">Fungsi adalah relasi dengan aturan yang tidak boleh bercabang.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Fungsi itu janji: <em>setiap input keluar tepat satu hasil.</em> Tidak ada input yang tidak kebagian, dan tidak ada input yang keluar dua kali dengan hasil berbeda.</p>
+        </div>
+
+        <p>Bayangkan sebuah mesin. Kamu memasukkan angka $3$, mesin mengeluarkan $7$. Kamu masukkan $3$ lagi, mesin harus mengeluarkan $7$ lagi — bukan $9$, bukan $5$. Kalau hasilnya berubah-ubah untuk input yang sama, mesin itu rusak. Dalam matematika, aturan yang rusak seperti itu tidak layak disebut <strong>fungsi</strong>.</p>
+
+        <p>Jadi fungsi lebih dulu soal <strong>janji</strong>, baru soal rumus. Rumus hanyalah salah satu cara menuliskan janji tersebut.</p>
+
+        <h3>Definisi formalnya</h3>
+
+        <div class="panel" style="margin:20px 0">
+          <p style="margin:0 0 10px"><strong>Definisi.</strong> Misalkan $A$ dan $B$ dua himpunan. Fungsi $f$ dari $A$ ke $B$ adalah aturan yang memasangkan <strong>setiap</strong> anggota $A$ dengan <strong>tepat satu</strong> anggota $B$.</p>
+          <p style="margin:0;font-family:var(--mono);font-size:.82rem;color:var(--muted)">ditulis: $f: A \to B$</p>
+        </div>
+
+        <p>Kalimat itu terlihat kaku, tapi isinya cuma dua syarat. Mari bongkar satu per satu.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Potongan kalimat</th><th>Artinya</th><th>Kalau dilanggar</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>“setiap anggota $A$”</strong></td>
+                <td>semua input harus kebagian pasangan</td>
+                <td>ada input yatim → bukan fungsi</td>
+              </tr>
+              <tr>
+                <td><strong>“tepat satu anggota $B$”</strong></td>
+                <td>satu input hanya boleh punya satu hasil</td>
+                <td>input bercabang ke dua hasil → bukan fungsi</td>
+              </tr>
+              <tr>
+                <td><strong>“anggota $B$”</strong></td>
+                <td>hasilnya harus berasal dari himpunan tujuan</td>
+                <td>hasil di luar $B$ → bukan fungsi dari $A$ ke $B$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Perhatikan bahwa syaratnya <strong>tidak simetris</strong>. Dua input boleh berbagi satu output yang sama — itu masih sah. Yang dilarang hanya kebalikannya: satu input punya dua output.</p>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 520 340" role="img" aria-labelledby="fig1Title fig1Desc">
+              <title id="fig1Title">Diagram panah fungsi dari A ke B</title>
+              <desc id="fig1Desc">Himpunan A berisi 1, 2, 3, 4. Himpunan B berisi a, b, c, d. Panah menghubungkan 1 ke a, 2 ke c, 3 ke a, dan 4 ke d. Anggota b tidak pernah dicapai.</desc>
+              <defs>
+                <marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+                  <path d="M0 0l6 3-6 3Z" fill="#1f4e79"/>
+                </marker>
+              </defs>
+
+              <ellipse cx="128" cy="170" rx="80" ry="128" fill="rgba(31,78,121,.045)" stroke="#1f4e79" stroke-width="1.4"/>
+              <ellipse cx="392" cy="170" rx="80" ry="128" fill="rgba(31,78,121,.045)" stroke="#1f4e79" stroke-width="1.4"/>
+
+              <text x="128" y="24" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="1.5" fill="#55636f">A · DOMAIN</text>
+              <text x="392" y="24" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="1.5" fill="#55636f">B · KODOMAIN</text>
+
+              <g fill="#fffefa" stroke="#1f4e79" stroke-width="1.3">
+                <circle cx="104" cy="84" r="15"/><circle cx="104" cy="142" r="15"/>
+                <circle cx="104" cy="200" r="15"/><circle cx="104" cy="258" r="15"/>
+                <circle cx="368" cy="84" r="15"/><circle cx="368" cy="142" r="15"/>
+                <circle cx="368" cy="200" r="15"/><circle cx="368" cy="258" r="15"/>
+              </g>
+
+              <g font-family="'Newsreader',serif" font-size="15" font-style="italic" fill="#16212c" text-anchor="middle" dominant-baseline="central">
+                <text x="104" y="85">1</text><text x="104" y="143">2</text>
+                <text x="104" y="201">3</text><text x="104" y="259">4</text>
+                <text x="368" y="85">a</text><text x="368" y="143">b</text>
+                <text x="368" y="201">c</text><text x="368" y="259">d</text>
+              </g>
+
+              <g fill="none" stroke="#1f4e79" stroke-width="1.5" marker-end="url(#ar1)">
+                <path d="M120 84C190 84 290 84 351 84"/>
+                <path d="M120 142C190 142 290 199 351 199"/>
+                <path d="M120 200C190 200 290 86 351 86"/>
+                <path d="M120 258C190 258 290 257 351 257"/>
+              </g>
+
+              <g stroke="#b03a26" stroke-width="1" stroke-dasharray="3 3">
+                <circle cx="368" cy="142" r="22" fill="none"/>
+              </g>
+              <text x="368" y="176" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#b03a26">tak pernah dicapai</text>
+
+              <text x="260" y="322" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing=".5" fill="#55636f">f(1)=a · f(2)=c · f(3)=a · f(4)=d</text>
+            </svg>
+          </div>
+          <figcaption><b>Fungsi yang sah.</b> Semua anggota $A$ punya panah, dan tiap panah keluar hanya satu. Dua input ($1$ dan $3$) boleh berbagi output $a$. Anggota $b$ tidak pernah dicapai — itu tidak masalah, karena $b$ hanya bagian dari kodomain, bukan range.</figcaption>
+        </figure>
+
+        <h3>Membaca notasi $f(x)$</h3>
+
+        <p>Di sekolah dasar, tanda kurung berarti perkalian: $3(4)=12$. Di dunia fungsi, tanda kurung itu berarti <strong>“dimasukkan ke”</strong>. Jadi $f(x)$ dibaca “$f$ dari $x$”, bukan “$f$ kali $x$”.</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>notasi</span><span>fungsi satu variabel</span></div>
+          <div class="formula-body">$f: x \mapsto f(x)$</div>
+          <div class="formula-foot">$x$ adalah <strong>input</strong> (variabel bebas). $f(x)$ adalah <strong>output</strong> (variabel terikat), karena nilainya bergantung pada $x$.</div>
+        </div>
+
+        <p>Kalau rumusnya $f(x)=2x+1$, maka $x$ adalah tempat kosong yang menunggu diisi. Isi dengan $3$, hasilnya $2\cdot3+1=7$. Isi dengan $0$, hasilnya $1$. Isi dengan $-2$, hasilnya $-3$.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Menghitung nilai fungsi</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=2x+1$. Hitung $f(3)$, $f(0)$, dan $f(-2)$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">ganti setiap $x$ dengan angka</span>
+                <p>$f(3)=2(3)+1$</p>
+                <p>$=6+1=7$</p>
+              </li>
+              <li>
+                <span class="step-label">ulangi untuk $x=0$</span>
+                <p>$f(0)=2(0)+1=0+1=1$</p>
+              </li>
+              <li>
+                <span class="step-label">hati-hati tanda negatif</span>
+                <p>$f(-2)=2(-2)+1=-4+1=-3$</p>
+              </li>
+            </ol>
+            <span class="answer">$f(3)=7,\quad f(0)=1,\quad f(-2)=-3$</span>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p>Menulis $f(3)=23+1$ karena mengira $2$ dan $3$ ditempel. Yang benar: $2(3)$ berarti $2\times3$. Tanda kurung pada $f(3)$ menunjukkan <strong>input</strong>, sedangkan kurung pada $2(3)$ menunjukkan <strong>perkalian</strong> — dua hal berbeda yang kebetulan memakai simbol sama.</p>
+        </div>
+
+        <h3>Satu fungsi, empat wajah</h3>
+
+        <p>Fungsi yang sama bisa ditulis dengan cara berbeda. Ini penting: kalau kamu hanya mengenali fungsi dari rumusnya, kamu akan bingung saat bertemu tabel atau grafik.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Bentuk</th><th>Contoh untuk $f(x)=2x$</th><th>Yang perlu diperhatikan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Rumus</strong></td><td>$f(x)=2x$</td><td>paling ringkas, tapi butuh dihitung</td></tr>
+              <tr><td><strong>Tabel</strong></td><td>$x$: 1, 2, 3 → $f(x)$: 2, 4, 6</td><td>hanya memuat sebagian input</td></tr>
+              <tr><td><strong>Pasangan berurutan</strong></td><td>$\{(1,2),(2,4),(3,6)\}$</td><td>urutan $(x,\,f(x))$ tidak boleh dibalik</td></tr>
+              <tr><td><strong>Grafik</strong></td><td>garis lurus melalui titik asal</td><td>dibaca dengan uji garis vertikal (bagian 05)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Keempatnya menggambarkan janji yang sama. Kalau kamu bisa berpindah dari satu wajah ke wajah lain, fungsi berhenti terasa seperti hafalan.</p>
+
+        <h3>Latihan membaca: fungsi atau bukan?</h3>
+
+        <p>Aturan praktisnya cuma satu: <strong>cek input-nya, bukan output-nya</strong>. Tanya dua hal — apakah semua input muncul, dan apakah ada input yang muncul dua kali dengan pasangan berbeda.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Tiga relasi, satu kesimpulan</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tentukan mana yang fungsi dari $\{1,2,3\}$ ke $\{a,b,c\}$.</p>
+
+            <p style="margin-top:14px"><strong>(i)</strong> $\{(1,a),(2,b),(3,b)\}$</p>
+            <ol class="steps">
+              <li><span class="step-label">cek input</span><p>Input yang muncul: $1$, $2$, $3$ — lengkap.</p></li>
+              <li><span class="step-label">cek pengulangan</span><p>Tidak ada input yang muncul dua kali.</p></li>
+              <li><span class="step-label">simpulkan</span><p>Fungsi. Output $b$ dipakai dua kali, tapi itu boleh.</p></li>
+            </ol>
+
+            <p style="margin-top:22px"><strong>(ii)</strong> $\{(1,a),(1,b),(2,c)\}$</p>
+            <ol class="steps">
+              <li><span class="step-label">cek input</span><p>Input $1$ muncul dua kali dengan hasil berbeda.</p></li>
+              <li><span class="step-label">simpulkan</span><p>Bukan fungsi — bercabang.</p></li>
+            </ol>
+
+            <p style="margin-top:22px"><strong>(iii)</strong> $\{(1,c),(3,a)\}$</p>
+            <ol class="steps">
+              <li><span class="step-label">cek input</span><p>Input $2$ tidak punya pasangan sama sekali.</p></li>
+              <li><span class="step-label">simpulkan</span><p>Bukan fungsi dari $\{1,2,3\}$ — ada input yatim.</p></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="fig-row">
+          <figure class="fig">
+            <div class="fig-frame">
+              <svg viewBox="0 0 300 250" role="img" aria-labelledby="okTitle okDesc">
+                <title id="okTitle">Contoh relasi yang merupakan fungsi</title>
+                <desc id="okDesc">Tiga input masing-masing punya satu panah. Dua input menuju output yang sama.</desc>
+                <ellipse cx="66" cy="125" rx="40" ry="86" fill="rgba(31,78,121,.05)" stroke="#1f4e79" stroke-width="1.2"/>
+                <ellipse cx="234" cy="125" rx="40" ry="86" fill="rgba(31,78,121,.05)" stroke="#1f4e79" stroke-width="1.2"/>
+                <g fill="#16212c">
+                  <circle cx="52" cy="76" r="3.5"/><circle cx="52" cy="125" r="3.5"/><circle cx="52" cy="174" r="3.5"/>
+                  <circle cx="220" cy="76" r="3.5"/><circle cx="220" cy="125" r="3.5"/><circle cx="220" cy="174" r="3.5"/>
+                </g>
+                <g font-family="'Newsreader',serif" font-size="14" font-style="italic" fill="#16212c" text-anchor="end">
+                  <text x="34" y="81">1</text><text x="34" y="130">2</text><text x="34" y="179">3</text>
+                </g>
+                <g font-family="'Newsreader',serif" font-size="14" font-style="italic" fill="#16212c">
+                  <text x="232" y="81">a</text><text x="232" y="130">b</text><text x="232" y="179">c</text>
+                </g>
+                <g fill="none" stroke="#1f4e79" stroke-width="1.4" marker-end="url(#ar1)">
+                  <path d="M58 76C110 76 160 125 212 125"/>
+                  <path d="M58 125C110 125 160 76 212 76"/>
+                  <path d="M58 174C110 174 160 174 212 174"/>
+                </g>
+                <text x="150" y="232" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#2f6b4f">FUNGSI</text>
+              </svg>
+            </div>
+          </figure>
+
+          <figure class="fig">
+            <div class="fig-frame">
+              <svg viewBox="0 0 300 250" role="img" aria-labelledby="badTitle badDesc">
+                <title id="badTitle">Contoh relasi yang bukan fungsi</title>
+                <desc id="badDesc">Input satu punya dua panah, input tiga tidak punya panah.</desc>
+                <ellipse cx="66" cy="125" rx="40" ry="86" fill="rgba(176,58,38,.04)" stroke="#b03a26" stroke-width="1.2" stroke-opacity=".8"/>
+                <ellipse cx="234" cy="125" rx="40" ry="86" fill="rgba(31,78,121,.05)" stroke="#1f4e79" stroke-width="1.2"/>
+                <g fill="#16212c">
+                  <circle cx="52" cy="76" r="3.5"/><circle cx="52" cy="125" r="3.5"/><circle cx="52" cy="174" r="3.5"/>
+                  <circle cx="220" cy="76" r="3.5"/><circle cx="220" cy="125" r="3.5"/><circle cx="220" cy="174" r="3.5"/>
+                </g>
+                <g font-family="'Newsreader',serif" font-size="14" font-style="italic" fill="#16212c" text-anchor="end">
+                  <text x="34" y="81">1</text><text x="34" y="130">2</text><text x="34" y="179">3</text>
+                </g>
+                <g font-family="'Newsreader',serif" font-size="14" font-style="italic" fill="#16212c">
+                  <text x="232" y="81">a</text><text x="232" y="130">b</text><text x="232" y="179">c</text>
+                </g>
+                <g fill="none" stroke="#1f4e79" stroke-width="1.4" marker-end="url(#ar1)">
+                  <path d="M58 76C110 76 160 76 212 76"/>
+                  <path d="M58 76C110 76 160 174 212 174"/>
+                  <path d="M58 125C110 125 160 125 212 125"/>
+                </g>
+                <g stroke="#b03a26" stroke-width="1.2" stroke-dasharray="3 3" fill="none">
+                  <circle cx="52" cy="174" r="9"/>
+                </g>
+                <text x="150" y="232" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#b03a26">BUKAN FUNGSI</text>
+              </svg>
+            </div>
+          </figure>
+        </div>
+
+        <p style="font-size:.92rem;color:var(--muted)">Kiri: setiap input punya satu panah, jadi fungsi. Kanan: input $1$ bercabang ke $a$ dan $c$, sedangkan input $3$ tidak punya panah sama sekali — dua pelanggaran sekaligus.</p>
+
+        <h3>Fungsi di kehidupan nyata</h3>
+
+        <p>Relasi berikut sering muncul di soal cerita. Yang menentukan bukan nama relasinya, tapi arah pemetaannya.</p>
+
+        <div class="deflist">
+          <dt>NIM → mahasiswa</dt>
+          <dd>Fungsi. Satu NIM hanya milik satu mahasiswa.</dd>
+
+          <dt>mahasiswa → NIM</dt>
+          <dd>Fungsi juga, selama tidak ada NIM kembar. Inilah yang membuat NIM disebut unik.</dd>
+
+          <dt>mahasiswa → mata kuliah</dt>
+          <dd>Bukan fungsi. Satu mahasiswa bisa mengambil beberapa mata kuliah, jadi outputnya bercabang.</dd>
+
+          <dt>anak → ibu kandung</dt>
+          <dd>Fungsi. Setiap orang punya tepat satu ibu kandung.</dd>
+
+          <dt>ibu → anak</dt>
+          <dd>Bukan fungsi. Seorang ibu bisa punya lebih dari satu anak.</dd>
+
+          <dt>suhu °C → suhu °F</dt>
+          <dd>Fungsi. Setiap nilai Celsius menghasilkan tepat satu nilai Fahrenheit.</dd>
+        </div>
+
+        <div class="note">
+          <span class="note-label">kenapa ini penting</span>
+          <p>Hampir semua kesalahan di bab invers dan komposisi berasal dari satu hal: lupa bahwa fungsi tidak boleh bercabang. Kalau kamu sudah bisa menilai sebuah relasi dengan aturan “satu input, satu output”, dua bab berikutnya akan jauh lebih ringan.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Relasi dari $\{1,2,3\}$ ke $\{a,b\}$: $\{(1,a),(2,a),(3,b)\}$. Fungsi?</p>
+            <p style="color:var(--green)">Ya. Semua input muncul tepat sekali. Output $a$ dipakai dua kali — itu tetap sah.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> $f(x)=x^2$. Hitung $f(-3)$. Apakah hasilnya $-9$?</p>
+            <p style="color:var(--green)">Bukan. $f(-3)=(-3)^2=9$. Tanda negatif ikut dikuadratkan, jadi hasilnya positif.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> Kalau $f(1)=2$ dan $f(1)=5$, apakah $f$ fungsi?</p>
+            <p style="color:var(--green)">Bukan. Satu input menghasilkan dua nilai berbeda, artinya aturannya bercabang.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 01</h3>
+          <ul>
+            <li>Fungsi $f:A\to B$ memasangkan <strong>setiap</strong> anggota $A$ ke <strong>tepat satu</strong> anggota $B$.</li>
+            <li>Dua input boleh berbagi satu output; satu input tidak boleh punya dua output.</li>
+            <li>$f(x)$ berarti “$f$ dari $x$”, bukan $f$ dikali $x$.</li>
+            <li>Fungsi bisa ditulis sebagai rumus, tabel, pasangan berurutan, atau grafik.</li>
+            <li>$A$ disebut domain, $B$ disebut kodomain, dan hasil yang benar-benar muncul disebut range.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="01" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
+      <nav class="nextprev" aria-label="Navigasi halaman">
+        <a class="np" href="index.html">
+          <span>kembali</span>
+          <b>Beranda</b>
+        </a>
+        <a class="np next" href="#definisi">
+          <span>selanjutnya</span>
+          <b>Bagian 02 · Domain, kodomain, range</b>
+        </a>
+      </nav>
+
+    </div>
+  </div>
+</main>
+
+<footer class="shell">
+  <div class="foot">
+    <span>materi-fungsi · bab 01</span>
+    <span><a href="https://github.com/voltakyy/materi-fungsi">sumber di GitHub</a></span>
+  </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/app.js"></script>
+</body>
+</html>
