@@ -54,6 +54,7 @@
         <li><a href="#linear" data-for="06"><span class="n">06</span><span>Fungsi linear</span></a></li>
         <li><a href="#kuadrat" data-for="07"><span class="n">07</span><span>Fungsi kuadrat</span></a></li>
         <li><a href="#rasional" data-for="08"><span class="n">08</span><span>Fungsi rasional</span></a></li>
+        <li><a href="#akar" data-for="09"><span class="n">09</span><span>Fungsi akar</span></a></li>
       </ol>
       <p class="rail-note">Enam bentuk yang paling sering muncul. Setiap bentuk punya ciri grafik dan jebakannya sendiri.</p>
     </aside>
@@ -718,14 +719,214 @@
 
       </section>
 
+      <section class="sec" id="akar" data-lesson="09">
+
+        <div class="sec-head">
+          <span class="sec-no">09</span>
+          <div>
+            <h2>Fungsi akar</h2>
+            <p class="sec-sub">Setengah parabola yang tumbuh pelan, dan jebakan tanda saat menyelesaikan persamaan.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Akar kuadrat selalu mengeluarkan nilai <em>non-negatif</em>. $\sqrt{9}=3$, bukan $\pm3$. Tanda $\pm$ muncul saat menyelesaikan persamaan, bukan saat menghitung akar.</p>
+        </div>
+
+        <p>Fungsi akar paling dasar adalah $f(x)=\sqrt{x}$. Ia hanya menerima $x\ge0$, karena di bilangan real tidak ada akar kuadrat dari bilangan negatif. Hasilnya juga selalu $\ge0$.</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>bentuk dasar</span><span>fungsi akar</span></div>
+          <div class="formula-body">$f(x)=\sqrt{x}\qquad D_f=[0,\infty),\quad R_f=[0,\infty)$</div>
+          <div class="formula-foot">Grafiknya setengah parabola yang rebah: naik cepat di awal, lalu makin landai. Bentuk ini adalah kebalikan dari $y=x^2$ pada $x\ge0$.</div>
+        </div>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 740 330" role="img" aria-labelledby="rootTitle rootDesc">
+              <title id="rootTitle">Grafik akar x dan grafik akar x minus 3 plus 1</title>
+              <desc id="rootDesc">Panel kiri menunjukkan kurva akar x mulai dari titik asal. Panel kanan menunjukkan kurva yang bergeser tiga ke kanan dan satu ke atas.</desc>
+              <defs>
+                <pattern id="g9" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <path d="M24 0H0v24" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                </pattern>
+              </defs>
+              <rect width="740" height="330" fill="#f7f6f0"/>
+              <rect width="740" height="330" fill="url(#g9)"/>
+
+              <!-- panel 1 -->
+              <line x1="40" y1="250" x2="350" y2="250" stroke="#16212c" stroke-width="1"/>
+              <line x1="90" y1="40" x2="90" y2="290" stroke="#16212c" stroke-width="1"/>
+              <polyline points="90,250 130,210 170,194 210,181 250,170 290,160 330,150"
+                        fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+              <circle cx="90" cy="250" r="4" fill="#1f4e79"/>
+              <text x="300" y="270" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">y = √x</text>
+              <text x="196" y="316" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#2f6b4f">mulai di (0, 0)</text>
+
+              <!-- panel 2 -->
+              <line x1="400" y1="250" x2="710" y2="250" stroke="#16212c" stroke-width="1"/>
+              <line x1="450" y1="40" x2="450" y2="290" stroke="#16212c" stroke-width="1"/>
+              <line x1="450" y1="210" x2="660" y2="210" stroke="#b03a26" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="450" y1="210" x2="450" y2="250" stroke="#b03a26" stroke-width="1" stroke-dasharray="4 4"/>
+              <polyline points="450,210 490,170 530,154 570,141 610,130 650,120"
+                        fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+              <circle cx="450" cy="210" r="4" fill="#b03a26"/>
+              <text x="620" y="270" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">y = √(x−3) + 1</text>
+              <text x="556" y="316" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#b03a26">mulai di (3, 1)</text>
+            </svg>
+          </div>
+          <figcaption><b>Pergeseran mengikuti titik mulainya.</b> Kurva kanan adalah kurva kiri yang digeser $3$ ke kanan dan $1$ ke atas. Domain dan range ikut bergeser.</figcaption>
+        </figure>
+
+        <h3>Domain dan range fungsi akar</h3>
+
+        <p>Untuk $f(x)=\sqrt{u(x)}$, syaratnya $u(x)\ge0$. Setelah domain ketemu, range-nya mengikuti titik awal kurva.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Akar dengan pergeseran</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tentukan domain dan range $f(x)=\sqrt{2x-6}+1$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">syarat isi akar</span>
+                <p>$2x-6\ge0$</p>
+                <p>$2x\ge6$</p>
+                <p>$x\ge3$</p>
+              </li>
+              <li>
+                <span class="step-label">tentukan titik awal</span>
+                <p>Saat $x=3$, isi akar $=0$, sehingga $f(3)=0+1=1$.</p>
+              </li>
+              <li>
+                <span class="step-label">tentukan arah dan batas range</span>
+                <p>Akar selalu $\ge0$, jadi $f(x)\ge1$. Nilai $1$ tercapai di $x=3$.</p>
+              </li>
+            </ol>
+            <span class="answer">$D_f=[3,\infty),\qquad R_f=[1,\infty)$</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Isi akar berupa kuadrat</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tentukan domain $g(x)=\sqrt{x^2-4}$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">tulis syaratnya</span>
+                <p>$x^2-4\ge0$</p>
+              </li>
+              <li>
+                <span class="step-label">faktorkan</span>
+                <p>$(x-2)(x+2)\ge0$</p>
+              </li>
+              <li>
+                <span class="step-label">uji tanda pada garis bilangan</span>
+                <p>Di $x&lt;-2$ hasilnya positif; di antara $-2$ dan $2$ hasilnya negatif; di $x&gt;2$ positif lagi.</p>
+              </li>
+              <li>
+                <span class="step-label">ambil daerah non-negatif</span>
+                <p>Termasuk titik $x=-2$ dan $x=2$, karena hasilnya $0$.</p>
+              </li>
+            </ol>
+            <span class="answer">$D_g=(-\infty,-2]\cup[2,\infty)$</span>
+          </div>
+        </div>
+
+        <h3>Menyelesaikan persamaan akar</h3>
+
+        <p>Langkah standarnya: kuadratkan kedua ruas. Tapi mengkuadratkan bisa <strong>memunculkan solusi palsu</strong>, karena $(-3)^2=3^2$ padahal $-3\neq3$. Karena itu setiap jawaban wajib diperiksa ke persamaan asli.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 3</span>
+            <strong>Persamaan akar dengan solusi palsu</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Selesaikan $\sqrt{2x+3}=x$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">tentukan syarat dulu</span>
+                <p>Isi akar: $2x+3\ge0 \Rightarrow x\ge-\dfrac32$.</p>
+                <p>Ruas kanan juga harus $\ge0$, karena hasil akar tidak pernah negatif: $x\ge0$.</p>
+                <p>Gabungan syarat: $x\ge0$.</p>
+              </li>
+              <li>
+                <span class="step-label">kuadratkan kedua ruas</span>
+                <p>$2x+3=x^2$</p>
+              </li>
+              <li>
+                <span class="step-label">susun persamaan kuadrat</span>
+                <p>$x^2-2x-3=0$</p>
+                <p>$(x-3)(x+1)=0$</p>
+                <p>$x=3$ atau $x=-1$.</p>
+              </li>
+              <li>
+                <span class="step-label">periksa ke syarat dan ke persamaan asli</span>
+                <p>$x=3$: $\sqrt{9}=3$ ✓</p>
+                <p>$x=-1$: $\sqrt{1}=1$, padahal ruas kanan $-1$. ✗</p>
+              </li>
+              <li>
+                <span class="step-label">buang solusi palsu</span>
+                <p>$x=-1$ muncul hanya karena pengkuadratan, bukan karena memenuhi persamaan asli.</p>
+              </li>
+            </ol>
+            <span class="answer">$x=3$</span>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>$\sqrt{a+b}\neq\sqrt{a}+\sqrt{b}$.</strong> Uji dengan $a=b=9$: $\sqrt{18}\approx4{,}24$, sedangkan $3+3=6$. Akar tidak “membagi” penjumlahan.</p>
+          <p><strong>Menulis $\sqrt{9}=\pm3$.</strong> Simbol $\sqrt{\ }$ didefinisikan sebagai akar non-negatif. Yang punya dua jawaban adalah persamaan $x^2=9$.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Domain dan range $f(x)=\sqrt{x-5}$?</p>
+            <p style="color:var(--green)">$x-5\ge0 \Rightarrow D_f=[5,\infty)$. Akar $\ge0$, jadi $R_f=[0,\infty)$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> Selesaikan $\sqrt{x+6}=x$.</p>
+            <p style="color:var(--green)">Kuadratkan: $x+6=x^2 \Rightarrow x^2-x-6=0 \Rightarrow (x-3)(x+2)=0$. Periksa: $x=3$ ✓, $x=-2$ ✗. Jawaban $x=3$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> Apakah $\sqrt{25}=5$ dan $\sqrt{25}=-5$ keduanya benar?</p>
+            <p style="color:var(--green)">Hanya $5$. Simbol akar kuadrat memberi nilai non-negatif.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 09</h3>
+          <ul>
+            <li>$\sqrt{u(x)}$ menuntut $u(x)\ge0$; hasilnya selalu non-negatif.</li>
+            <li>Domain akar = daerah yang membuat isi akar tidak negatif.</li>
+            <li>Range ditentukan oleh titik awal kurva setelah pergeseran.</li>
+            <li>Menyelesaikan persamaan akar: kuadratkan, lalu <strong>periksa</strong> setiap jawaban.</li>
+            <li>$\sqrt{a+b}$ tidak sama dengan $\sqrt a+\sqrt b$.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="09" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="#kuadrat">
+        <a class="np" href="#rasional">
           <span>sebelumnya</span>
-          <b>Bagian 07 · Fungsi kuadrat</b>
+          <b>Bagian 08 · Fungsi rasional</b>
         </a>
-        <a class="np next" href="#akar">
+        <a class="np next" href="#mutlak">
           <span>selanjutnya</span>
-          <b>Bagian 09 · Fungsi akar</b>
+          <b>Bagian 10 · Nilai mutlak</b>
         </a>
       </nav>
 
