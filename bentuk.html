@@ -53,6 +53,7 @@
       <ol>
         <li><a href="#linear" data-for="06"><span class="n">06</span><span>Fungsi linear</span></a></li>
         <li><a href="#kuadrat" data-for="07"><span class="n">07</span><span>Fungsi kuadrat</span></a></li>
+        <li><a href="#rasional" data-for="08"><span class="n">08</span><span>Fungsi rasional</span></a></li>
       </ol>
       <p class="rail-note">Enam bentuk yang paling sering muncul. Setiap bentuk punya ciri grafik dan jebakannya sendiri.</p>
     </aside>
@@ -477,14 +478,254 @@
 
       </section>
 
+      <section class="sec" id="rasional" data-lesson="08">
+
+        <div class="sec-head">
+          <span class="sec-no">08</span>
+          <div>
+            <h2>Fungsi rasional</h2>
+            <p class="sec-sub">Pecahan polinomial: domain berlubang, grafik punya asimtot.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Rasional itu <em>pembagian dua polinomial</em>. Semua keanehan grafiknya berasal dari satu larangan: penyebut tidak boleh nol.</p>
+        </div>
+
+        <p>Fungsi rasional berbentuk $\dfrac{P(x)}{Q(x)}$ dengan $P$ dan $Q$ polinomial dan $Q(x)\neq 0$. Karena penyebut tidak boleh nol, domainnya selalu “$\mathbb{R}$ dikurangi beberapa titik”.</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>bentuk umum</span><span>fungsi rasional</span></div>
+          <div class="formula-body">$f(x)=\dfrac{P(x)}{Q(x)},\qquad Q(x)\neq 0$</div>
+          <div class="formula-foot">Titik-titik yang membuat $Q(x)=0$ dikeluarkan dari domain. Di sekitar titik itu, grafik biasanya meledak ke atas atau ke bawah.</div>
+        </div>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 520 400" role="img" aria-labelledby="hypTitle hypDesc">
+              <title id="hypTitle">Grafik y sama dengan 1 per x dengan dua cabang</title>
+              <desc id="hypDesc">Dua cabang hiperbola di kuadran satu dan tiga, dengan sumbu x dan sumbu y sebagai asimtot.</desc>
+              <defs>
+                <pattern id="g8" width="26" height="26" patternUnits="userSpaceOnUse">
+                  <path d="M26 0H0v26" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                </pattern>
+              </defs>
+              <rect width="520" height="400" fill="#f7f6f0"/>
+              <rect width="520" height="400" fill="url(#g8)"/>
+
+              <line x1="26" y1="200" x2="496" y2="200" stroke="#16212c" stroke-width="1.1"/>
+              <line x1="260" y1="24" x2="260" y2="376" stroke="#16212c" stroke-width="1.1"/>
+              <path d="M496 200l-8-4v8ZM260 24l-4 8h8Z" fill="#16212c"/>
+
+              <line x1="260" y1="30" x2="260" y2="370" stroke="#b03a26" stroke-width="1" stroke-dasharray="5 5"/>
+              <line x1="34" y1="200" x2="486" y2="200" stroke="#b03a26" stroke-width="1" stroke-dasharray="5 5"/>
+
+              <polyline points="274,86 280,120 288,143 300,160 320,173 340,180 380,187 420,190 500,193"
+                        fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+              <polyline points="246,314 240,280 232,257 220,240 200,227 180,220 140,213 100,210 20,207"
+                        fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+
+              <text x="392" y="176" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#1f4e79">y = 1/x</text>
+              <text x="268" y="40" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#b03a26">x = 0</text>
+              <text x="410" y="192" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#b03a26">y = 0</text>
+            </svg>
+          </div>
+          <figcaption><b>Dua cabang, bukan satu garis.</b> Di $x=0$ fungsinya tidak terdefinisi. Grafik mendekati sumbu $y$ dan sumbu $x$ tanpa pernah menyentuhnya — dua garis itu disebut asimtot.</figcaption>
+        </figure>
+
+        <h3>Domain: keluarkan titik yang membuat penyebut nol</h3>
+
+        <p>Ini langkah pertama dan paling menentukan. Tanpa domain yang benar, semua analisis berikutnya salah alamat.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Domain dengan penyebut berfaktor</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tentukan domain $f(x)=\dfrac{x+2}{x^2-4}$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">faktorkan penyebut</span>
+                <p>$x^2-4=(x-2)(x+2)$</p>
+              </li>
+              <li>
+                <span class="step-label">cari pembuat nol</span>
+                <p>$(x-2)(x+2)=0 \Rightarrow x=2$ atau $x=-2$</p>
+              </li>
+              <li>
+                <span class="step-label">keluarkan dari domain</span>
+                <p>Kedua nilai itu membuat pembagian dengan nol.</p>
+              </li>
+            </ol>
+            <span class="answer">$D_f=\mathbb{R}\setminus\{-2,\,2\}$</span>
+            <p style="margin-top:14px;font-size:.92rem;color:var(--muted)">Perhatikan: pembilang juga memuat $(x+2)$. Faktor yang sama di atas dan di bawah <strong>tidak</strong> menghapus larangan di $x=-2$. Yang terjadi justru lubang — kita bahas di bawah.</p>
+          </div>
+        </div>
+
+        <h3>Asimtot: garis yang didekati, bukan disentuh</h3>
+
+        <div class="grid-2">
+          <div class="panel panel-tight">
+            <span class="chip chip-red">asimtot vertikal</span>
+            <p style="margin:10px 0 0;font-size:.94rem;color:var(--muted)">Terjadi di $x$ yang membuat penyebut nol <strong>tetapi pembilang tidak nol</strong>. Grafik meledak ke $\pm\infty$ di dekat garis itu.</p>
+          </div>
+          <div class="panel panel-tight">
+            <span class="chip chip-blue">asimtot horizontal</span>
+            <p style="margin:10px 0 0;font-size:.94rem;color:var(--muted)">Perilaku saat $x\to\pm\infty$. Ditentukan dengan membandingkan derajat pembilang dan penyebut.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Derajat</th><th>Asimtot horizontal</th><th>Contoh</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>pembilang &lt; penyebut</td><td>$y=0$</td><td>$\dfrac{1}{x^2+1}$</td></tr>
+              <tr><td>pembilang $=$ penyebut</td><td>$y=\dfrac{\text{koefisien depan atas}}{\text{koefisien depan bawah}}$</td><td>$\dfrac{3x+1}{x-2}\to y=3$</td></tr>
+              <tr><td>pembilang &gt; penyebut</td><td>tidak ada asimtot horizontal</td><td>$\dfrac{x^2}{x+1}$</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Analisis lengkap satu fungsi rasional</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Analisis $f(x)=\dfrac{2x+1}{x-1}$: domain, asimtot, titik potong, lalu sketsa.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">domain</span>
+                <p>$x-1\neq0 \Rightarrow x\neq1$.</p>
+              </li>
+              <li>
+                <span class="step-label">asimtot vertikal</span>
+                <p>Di $x=1$, pembilang $2(1)+1=3\neq0$. Jadi $x=1$ adalah asimtot vertikal.</p>
+              </li>
+              <li>
+                <span class="step-label">asimtot horizontal</span>
+                <p>Derajat atas $=$ derajat bawah $=1$. Rasio koefisien depan: $\dfrac{2}{1}=2$. Jadi $y=2$.</p>
+              </li>
+              <li>
+                <span class="step-label">titik potong sumbu $y$</span>
+                <p>$f(0)=\dfrac{1}{-1}=-1$. Titik $(0,-1)$.</p>
+              </li>
+              <li>
+                <span class="step-label">titik potong sumbu $x$</span>
+                <p>$2x+1=0 \Rightarrow x=-\dfrac12$. Titik $\left(-\dfrac12,0\right)$.</p>
+              </li>
+            </ol>
+            <span class="answer">$D_f=\mathbb{R}\setminus\{1\},\quad$ VA $x=1,\quad$ HA $y=2$</span>
+          </div>
+        </div>
+
+        <h3>Lubang: saat faktor yang sama tidak menyelamatkan</h3>
+
+        <p>Kalau pembilang dan penyebut punya faktor yang sama, grafiknya menyerupai garis atau kurva sederhana — tapi ada satu titik yang bolong. Titik itu <strong>tetap keluar dari domain</strong>.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 3</span>
+            <strong>Menyederhanakan tanpa menghapus lubang</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Sederhanakan $f(x)=\dfrac{x^2-1}{x-1}$ dan tentukan domainnya.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">faktorkan pembilang</span>
+                <p>$x^2-1=(x-1)(x+1)$</p>
+              </li>
+              <li>
+                <span class="step-label">tulis ulang</span>
+                <p>$f(x)=\dfrac{(x-1)(x+1)}{x-1}$</p>
+              </li>
+              <li>
+                <span class="step-label">coret faktor yang sama — dengan syarat</span>
+                <p>Pencoretan sah hanya kalau $x-1\neq0$, yaitu $x\neq1$.</p>
+                <p>$f(x)=x+1$ untuk $x\neq1$.</p>
+              </li>
+              <li>
+                <span class="step-label">tandai lubangnya</span>
+                <p>Grafiknya garis $y=x+1$ dengan satu titik bolong di $(1,2)$.</p>
+              </li>
+            </ol>
+            <span class="answer">$f(x)=x+1,\quad x\neq1;\qquad D_f=\mathbb{R}\setminus\{1\}$</span>
+          </div>
+        </div>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 480 300" role="img" aria-labelledby="holeTitle holeDesc">
+              <title id="holeTitle">Garis dengan lubang di titik satu koma dua</title>
+              <desc id="holeDesc">Garis lurus naik dengan lingkaran kosong pada titik satu koma dua.</desc>
+              <defs>
+                <pattern id="g8b" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <path d="M24 0H0v24" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                </pattern>
+              </defs>
+              <rect width="480" height="300" fill="#f7f6f0"/>
+              <rect width="480" height="300" fill="url(#g8b)"/>
+              <line x1="30" y1="220" x2="450" y2="220" stroke="#16212c" stroke-width="1"/>
+              <line x1="80" y1="30" x2="80" y2="270" stroke="#16212c" stroke-width="1"/>
+              <line x1="110" y1="200" x2="430" y2="60" stroke="#1f4e79" stroke-width="2"/>
+              <circle cx="220" cy="152" r="6" fill="#f7f6f0" stroke="#b03a26" stroke-width="2"/>
+              <text x="232" y="146" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#b03a26">lubang di (1, 2)</text>
+              <text x="300" y="196" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#1f4e79">y = x + 1</text>
+            </svg>
+          </div>
+          <figcaption><b>Garis lurus, tapi tetap bukan garis utuh.</b> Satu titik hilang di $x=1$. Kalau digambar tanpa lubang, domain yang kamu klaim salah.</figcaption>
+        </figure>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>Mencoret faktor lalu lupa domain aslinya.</strong> Penyederhanaan mengubah bentuk, bukan domain. Domain ditentukan dari penyebut <em>sebelum</em> dicoret.</p>
+          <p><strong>Mengira grafik rasional boleh menyentuh asimtot vertikal.</strong> Tidak. Di $x$ itu fungsinya tidak terdefinisi, jadi tidak ada titik sama sekali.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Tentukan domain $f(x)=\dfrac{3}{x^2-9}$.</p>
+            <p style="color:var(--green)">$x^2-9=0 \Rightarrow x=\pm3$. Jadi $D_f=\mathbb{R}\setminus\{-3,3\}$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> Apa asimtot horizontal $f(x)=\dfrac{4x^2+1}{2x^2-5}$?</p>
+            <p style="color:var(--green)">Derajat sama, rasio koefisien depan $\frac{4}{2}=2$. Asimtot $y=2$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> $f(x)=\dfrac{x^2-4}{x-2}$. Apakah $f(2)$ terdefinisi?</p>
+            <p style="color:var(--green)">Tidak. Setelah disederhanakan $f(x)=x+2$ untuk $x\neq2$, tapi di $x=2$ tetap ada lubang.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 08</h3>
+          <ul>
+            <li>Rasional $=\dfrac{P(x)}{Q(x)}$; domain selalu mengeluarkan pembuat nol $Q(x)$.</li>
+            <li>Asimtot vertikal muncul saat penyebut nol dan pembilang tidak nol.</li>
+            <li>Asimtot horizontal dibaca dari perbandingan derajat pembilang dan penyebut.</li>
+            <li>Faktor yang sama menghasilkan lubang, bukan penghapusan domain.</li>
+            <li>Sketsa urut: domain → asimtot → titik potong → cabang.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="08" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="#linear">
+        <a class="np" href="#kuadrat">
           <span>sebelumnya</span>
-          <b>Bagian 06 · Fungsi linear</b>
+          <b>Bagian 07 · Fungsi kuadrat</b>
         </a>
-        <a class="np next" href="#rasional">
+        <a class="np next" href="#akar">
           <span>selanjutnya</span>
-          <b>Bagian 08 · Fungsi rasional</b>
+          <b>Bagian 09 · Fungsi akar</b>
         </a>
       </nav>
 
