@@ -55,6 +55,7 @@
         <li><a href="#kuadrat" data-for="07"><span class="n">07</span><span>Fungsi kuadrat</span></a></li>
         <li><a href="#rasional" data-for="08"><span class="n">08</span><span>Fungsi rasional</span></a></li>
         <li><a href="#akar" data-for="09"><span class="n">09</span><span>Fungsi akar</span></a></li>
+        <li><a href="#mutlak" data-for="10"><span class="n">10</span><span>Nilai mutlak</span></a></li>
       </ol>
       <p class="rail-note">Enam bentuk yang paling sering muncul. Setiap bentuk punya ciri grafik dan jebakannya sendiri.</p>
     </aside>
@@ -919,14 +920,228 @@
 
       </section>
 
+      <section class="sec" id="mutlak" data-lesson="10">
+
+        <div class="sec-head">
+          <span class="sec-no">10</span>
+          <div>
+            <h2>Nilai mutlak</h2>
+            <p class="sec-sub">Jarak, bukan tanda. Dari situ semua aturannya masuk akal.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>$|x|$ adalah <em>jarak</em> $x$ dari nol. Jarak tidak pernah negatif, jadi hasil nilai mutlak selalu $\ge0$.</p>
+        </div>
+
+        <p>Nilai mutlak sering diajarkan sebagai “buang tanda negatif”. Itu benar secara hasil, tapi tidak menjelaskan apa pun. Cara yang lebih masuk akal: nilai mutlak mengukur <strong>jarak pada garis bilangan</strong>.</p>
+
+        <p>$|5|=5$ karena $5$ berjarak $5$ dari nol. $|-5|=5$ karena $-5$ juga berjarak $5$ dari nol. Arahnya berbeda, jaraknya sama.</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>definisi</span><span>nilai mutlak</span></div>
+          <div class="formula-body">$|x|=\begin{cases}x, & x\ge0\\[2pt]-x, & x&lt;0\end{cases}$</div>
+          <div class="formula-foot">Perhatikan baris kedua: kalau $x$ negatif, maka $-x$ justru positif. Jadi hasilnya selalu non-negatif.</div>
+        </div>
+
+        <p>Dari definisi ini, $f(x)=|x|$ punya domain $\mathbb{R}$ dan range $[0,\infty)$. Grafiknya berbentuk huruf V dengan titik terendah di $(0,0)$.</p>
+
+        <div class="fig-row">
+          <figure class="fig">
+            <div class="fig-frame">
+              <svg viewBox="0 0 360 300" role="img" aria-labelledby="absTitle absDesc">
+                <title id="absTitle">Grafik nilai mutlak berbentuk V</title>
+                <desc id="absDesc">Dua garis lurus bertemu di titik asal, membentuk huruf V dengan puncak di nol koma nol.</desc>
+                <defs>
+                  <pattern id="g10" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <path d="M24 0H0v24" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                  </pattern>
+                </defs>
+                <rect width="360" height="300" fill="#f7f6f0"/>
+                <rect width="360" height="300" fill="url(#g10)"/>
+                <line x1="20" y1="230" x2="340" y2="230" stroke="#16212c" stroke-width="1"/>
+                <line x1="180" y1="30" x2="180" y2="280" stroke="#16212c" stroke-width="1"/>
+                <polyline points="45,95 90,140 135,185 180,230 225,185 270,140 315,95"
+                          fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+                <circle cx="180" cy="230" r="4" fill="#b03a26"/>
+                <text x="186" y="248" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#b03a26">(0, 0)</text>
+                <text x="300" y="86" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#1f4e79">y = |x|</text>
+              </svg>
+            </div>
+            <figcaption><b>V dengan titik terendah di nol.</b> Kiri dan kanan adalah cerminan, karena jarak ke kiri dan ke kanan sama.</figcaption>
+          </figure>
+
+          <figure class="fig">
+            <div class="fig-frame">
+              <svg viewBox="0 0 520 220" role="img" aria-labelledby="ineqTitle ineqDesc">
+                <title id="ineqTitle">Garis bilangan untuk x minus 2 kurang dari 3</title>
+                <desc id="ineqDesc">Daerah antara negatif satu dan lima diberi warna, dengan kedua ujung berupa titik kosong.</desc>
+                <rect width="520" height="220" fill="#f7f6f0"/>
+                <rect width="520" height="220" fill="url(#g10)"/>
+                <line x1="60" y1="110" x2="470" y2="110" stroke="#16212c" stroke-width="1.2"/>
+                <line x1="110" y1="110" x2="410" y2="110" stroke="#1f4e79" stroke-width="4" stroke-opacity=".3"/>
+                <g stroke="#16212c" stroke-width="1">
+                  <line x1="110" y1="104" x2="110" y2="116"/><line x1="160" y1="104" x2="160" y2="116"/>
+                  <line x1="210" y1="104" x2="210" y2="116"/><line x1="260" y1="104" x2="260" y2="116"/>
+                  <line x1="310" y1="104" x2="310" y2="116"/><line x1="360" y1="104" x2="360" y2="116"/>
+                  <line x1="410" y1="104" x2="410" y2="116"/>
+                </g>
+                <g font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f" text-anchor="middle">
+                  <text x="110" y="134">−1</text><text x="160" y="134">0</text><text x="210" y="134">1</text>
+                  <text x="260" y="134">2</text><text x="310" y="134">3</text><text x="360" y="134">4</text>
+                  <text x="410" y="134">5</text>
+                </g>
+                <circle cx="110" cy="110" r="6" fill="#f7f6f0" stroke="#b03a26" stroke-width="2"/>
+                <circle cx="410" cy="110" r="6" fill="#f7f6f0" stroke="#b03a26" stroke-width="2"/>
+                <text x="260" y="180" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#1f4e79">|x − 2| &lt; 3  →  −1 &lt; x &lt; 5</text>
+              </svg>
+            </div>
+            <figcaption><b>“Kurang dari” berarti di antara.</b> Jarak $x$ ke $2$ kurang dari $3$, jadi $x$ berada dalam radius $3$ dari titik $2$.</figcaption>
+          </figure>
+        </div>
+
+        <h3>Membaca $|x-a|$ sebagai jarak</h3>
+
+        <p>Bentuk $|x-a|$ berarti “jarak $x$ ke $a$”. Ini mengubah soal aljabar menjadi soal geometri, dan biasanya jauh lebih cepat.</p>
+
+        <div class="deflist">
+          <dt>$|x-3|=2$</dt>
+          <dd>Titik yang jaraknya $2$ dari $3$: yaitu $1$ dan $5$.</dd>
+
+          <dt>$|x+4|=1$</dt>
+          <dd>Perhatikan tandanya: $|x+4|=|x-(-4)|$. Jadi jarak ke $-4$ sama dengan $1$: $x=-5$ atau $x=-3$.</dd>
+
+          <dt>$|x-2|&lt;3$</dt>
+          <dd>Semua titik yang jaraknya ke $2$ kurang dari $3$: interval $(-1,5)$.</dd>
+
+          <dt>$|x-2|&gt;3$</dt>
+          <dd>Semua titik yang jaraknya ke $2$ lebih dari $3$: $x&lt;-1$ atau $x&gt;5$.</dd>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Bentuk</th><th>Arti</th><th>Penyelesaian</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$|x-a|=b$</td><td>jarak tepat $b$</td><td>$x=a-b$ atau $x=a+b$</td></tr>
+              <tr><td>$|x-a|&lt;b$</td><td>jarak kurang dari $b$</td><td>$a-b&lt;x&lt;a+b$ (di antara)</td></tr>
+              <tr><td>$|x-a|&gt;b$</td><td>jarak lebih dari $b$</td><td>$x&lt;a-b$ atau $x&gt;a+b$ (di luar)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <span class="note-label">cara mengingat</span>
+          <p><strong>“Kurang dari = di antara, lebih dari = di luar.”</strong> Kalau bingung, uji satu angka. Untuk $|x|&lt;3$, coba $x=0$: benar, dan $0$ memang di antara $-3$ dan $3$.</p>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Pertidaksamaan nilai mutlak</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Selesaikan $|2x-1|\le5$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">ubah ke bentuk “di antara”</span>
+                <p>$-5\le 2x-1\le 5$</p>
+              </li>
+              <li>
+                <span class="step-label">tambahkan $1$ ke semua ruas</span>
+                <p>$-4\le 2x\le 6$</p>
+              </li>
+              <li>
+                <span class="step-label">bagi semua ruas dengan $2$</span>
+                <p>$-2\le x\le 3$</p>
+              </li>
+              <li>
+                <span class="step-label">periksa ujungnya</span>
+                <p>$x=-2$: $|{-5}|=5$ ✓. $x=3$: $|5|=5$ ✓.</p>
+              </li>
+            </ol>
+            <span class="answer">$-2\le x\le 3$</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Persamaan dengan dua kemungkinan</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Selesaikan $|x-3|=2x$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">tentukan syarat</span>
+                <p>Ruas kiri tidak pernah negatif, jadi ruas kanan juga harus non-negatif: $2x\ge0 \Rightarrow x\ge0$.</p>
+              </li>
+              <li>
+                <span class="step-label">pecah menjadi dua kasus</span>
+                <p>Kasus 1: $x-3=2x \Rightarrow -3=x$.</p>
+                <p>Kasus 2: $-(x-3)=2x \Rightarrow -x+3=2x \Rightarrow x=1$.</p>
+              </li>
+              <li>
+                <span class="step-label">saring dengan syarat</span>
+                <p>$x=-3$ melanggar $x\ge0$, jadi dibuang.</p>
+              </li>
+              <li>
+                <span class="step-label">periksa</span>
+                <p>$x=1$: $|1-3|=2$ dan $2(1)=2$ ✓.</p>
+              </li>
+            </ol>
+            <span class="answer">$x=1$</span>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>$|a+b|\neq|a|+|b|$.</strong> Ambil $a=2$, $b=-5$: $|{-3}|=3$, sedangkan $|2|+|{-5}|=7$. Kesamaan hanya berlaku kalau $a$ dan $b$ bertanda sama.</p>
+          <p><strong>$\sqrt{x^2}=x$?</strong> Tidak selalu. $\sqrt{x^2}=|x|$. Untuk $x=-3$, hasilnya $3$, bukan $-3$.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Selesaikan $|x+1|=4$.</p>
+            <p style="color:var(--green)">Jarak ke $-1$ sama dengan $4$: $x=-5$ atau $x=3$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> Selesaikan $|x-4|&gt;2$.</p>
+            <p style="color:var(--green)">Jarak ke $4$ lebih dari $2$: $x&lt;2$ atau $x&gt;6$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> Hitung $|{-7}|+|3|$ dan $|{-7}+3|$.</p>
+            <p style="color:var(--green)">$7+3=10$, sedangkan $|{-4}|=4$. Keduanya berbeda — bukti bahwa nilai mutlak tidak boleh dipisah sembarangan.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 10</h3>
+          <ul>
+            <li>$|x|$ adalah jarak $x$ ke $0$, dan selalu $\ge0$.</li>
+            <li>$|x-a|$ adalah jarak $x$ ke $a$.</li>
+            <li>$|x-a|&lt;b$ → di antara; $|x-a|&gt;b$ → di luar.</li>
+            <li>Persamaan nilai mutlak biasanya punya dua kasus; periksa syaratnya.</li>
+            <li>$|a+b|\neq|a|+|b|$ dan $\sqrt{x^2}=|x|$.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="10" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="#rasional">
+        <a class="np" href="#akar">
           <span>sebelumnya</span>
-          <b>Bagian 08 · Fungsi rasional</b>
+          <b>Bagian 09 · Fungsi akar</b>
         </a>
-        <a class="np next" href="#mutlak">
+        <a class="np next" href="#sepotong">
           <span>selanjutnya</span>
-          <b>Bagian 10 · Nilai mutlak</b>
+          <b>Bagian 11 · Fungsi sepotong</b>
         </a>
       </nav>
 
