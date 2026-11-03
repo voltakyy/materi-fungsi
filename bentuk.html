@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bentuk-bentuk fungsi — materi-fungsi</title>
+<meta name="description" content="Fungsi linear, kuadrat, rasional, akar, nilai mutlak, dan fungsi sepotong: ciri rumus, bentuk grafik, domain, dan range.">
+<meta name="theme-color" content="#f7f6f0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<link rel="stylesheet" href="assets/tema.css">
+</head>
+<body>
+<a class="skip" href="#utama">Lompat ke isi</a>
+
+<header class="topbar">
+  <div class="shell topbar-in">
+    <a class="brand" href="index.html" aria-label="materi-fungsi, beranda">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="5" fill="#fffefa"/>
+        <g stroke="#1f4e79" stroke-opacity=".2" stroke-width=".8">
+          <path d="M0 8h32M0 16h32M0 24h32M8 0v32M16 0v32M24 0v32"/>
+        </g>
+        <path d="M4 27c5 0 6-18 11-18s5 12 9 12" fill="none" stroke="#1f4e79" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="15" cy="9" r="2.6" fill="#b03a26" stroke="#fffefa" stroke-width="1.2"/>
+      </svg>
+      <span class="brand-word">fungsi<i>.</i></span>
+    </a>
+
+    <nav class="topnav" aria-label="Navigasi utama">
+      <a href="dasar.html">Dasar</a>
+      <a href="bentuk.html" aria-current="page">Bentuk</a>
+      <a href="lanjut.html">Lanjut</a>
+      <a href="latihan.html">Latihan</a>
+      <a href="ringkasan.html">Ringkasan</a>
+    </nav>
+
+    <span class="readchip" data-readchip title="Progres bagian yang sudah ditandai">
+      <span class="bar"><span></span></span>
+      <b>0/15</b> selesai
+    </span>
+  </div>
+</header>
+
+<main id="utama" class="shell">
+  <div class="page">
+
+    <aside class="rail" aria-label="Isi bab 02">
+      <p class="rail-title">Bab 02 · Bentuk</p>
+      <ol>
+        <li><a href="#linear" data-for="06"><span class="n">06</span><span>Fungsi linear</span></a></li>
+      </ol>
+      <p class="rail-note">Enam bentuk yang paling sering muncul. Setiap bentuk punya ciri grafik dan jebakannya sendiri.</p>
+    </aside>
+
+    <div class="content">
+
+      <div class="page-head">
+        <div class="crumbs">
+          <a href="index.html">Beranda</a><span>/</span><span>Bab 02 · Bentuk</span>
+        </div>
+        <p class="kicker">Bab 02 · bagian 06 dari 15</p>
+        <h1>Enam wajah fungsi</h1>
+        <p class="lede">Setelah tahu apa itu fungsi, pertanyaan berikutnya: seperti apa bentuknya? Enam bagian di bab ini membedah bentuk yang paling sering keluar di soal — dan yang paling sering tertukar.</p>
+      </div>
+
+      <section class="sec" id="linear" data-lesson="06">
+
+        <div class="sec-head">
+          <span class="sec-no">06</span>
+          <div>
+            <h2>Fungsi linear</h2>
+            <p class="sec-sub">Garis lurus: satu kemiringan, satu titik potong.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Linear berarti <em>perubahan yang tetap</em>. Setiap kali $x$ naik satu, $y$ berubah dengan jumlah yang sama.</p>
+        </div>
+
+        <p>Fungsi linear adalah fungsi yang grafiknya garis lurus. Bentuk umumnya:</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>bentuk umum</span><span>fungsi linear</span></div>
+          <div class="formula-body">$f(x)=mx+c$</div>
+          <div class="formula-foot">$m$ adalah <strong>kemiringan</strong> (slope): seberapa cepat $y$ berubah. $c$ adalah <strong>titik potong sumbu $y$</strong>: nilai $f(0)$.</div>
+        </div>
+
+        <p>Kedua angka itu punya arti yang sangat konkret. Kalau $f(x)=3x+2$, maka:</p>
+
+        <div class="deflist">
+          <dt>$m=3$</dt>
+          <dd>Setiap $x$ bertambah $1$, $y$ bertambah $3$. Kalau $x$ bertambah $2$, $y$ bertambah $6$.</dd>
+
+          <dt>$c=2$</dt>
+          <dd>Saat $x=0$, $y=2$. Grafik memotong sumbu $y$ di titik $(0,2)$.</dd>
+        </div>
+
+        <p>Karena itu, linear dipakai untuk apa saja yang berubah dengan laju tetap: tarif parkir per jam, konversi suhu, biaya listrik per kWh, atau jarak yang ditempuh dengan kecepatan konstan.</p>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 520 400" role="img" aria-labelledby="linTitle linDesc">
+              <title id="linTitle">Tiga garis linear dengan kemiringan berbeda</title>
+              <desc id="linDesc">Garis biru naik dengan kemiringan 2, garis merah turun dengan kemiringan negatif 1, dan garis hijau mendatar dengan kemiringan 0.</desc>
+              <defs>
+                <pattern id="g6" width="26" height="26" patternUnits="userSpaceOnUse">
+                  <path d="M26 0H0v26" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                </pattern>
+              </defs>
+              <rect width="520" height="400" fill="#f7f6f0"/>
+              <rect width="520" height="400" fill="url(#g6)"/>
+
+              <line x1="34" y1="200" x2="490" y2="200" stroke="#16212c" stroke-width="1.1"/>
+              <line x1="260" y1="24" x2="260" y2="376" stroke="#16212c" stroke-width="1.1"/>
+              <path d="M490 200l-8-4v8ZM260 24l-4 8h8Z" fill="#16212c"/>
+              <text x="482" y="216" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">x</text>
+              <text x="270" y="34" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">y</text>
+
+              <line x1="200" y1="320" x2="340" y2="40" stroke="#1f4e79" stroke-width="2"/>
+              <line x1="200" y1="70" x2="380" y2="250" stroke="#b03a26" stroke-width="2"/>
+              <line x1="80" y1="140" x2="440" y2="140" stroke="#2f6b4f" stroke-width="2"/>
+
+              <circle cx="260" cy="140" r="4" fill="#2f6b4f"/>
+
+              <g font-family="'IBM Plex Mono',monospace" font-size="9">
+                <text x="346" y="46" fill="#1f4e79">m = 2</text>
+                <text x="386" y="246" fill="#b03a26">m = −1</text>
+                <text x="404" y="132" fill="#2f6b4f">m = 0</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption><b>Kemiringan menentukan arah.</b> $m&gt;0$ naik, $m&lt;0$ turun, $m=0$ mendatar. Yang berubah hanya kecuramannya; bentuknya tetap garis lurus.</figcaption>
+        </figure>
+
+        <h3>Menghitung kemiringan</h3>
+
+        <p>Kalau kamu punya dua titik pada garis, kemiringan adalah <strong>perubahan $y$ dibagi perubahan $x$</strong>:</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>rumus</span><span>kemiringan dari dua titik</span></div>
+          <div class="formula-body">$m=\dfrac{y_2-y_1}{x_2-x_1}$</div>
+          <div class="formula-foot">Urutan titiknya bebas, asal konsisten: kalau pembilang memakai $y_2-y_1$, penyebut harus $x_2-x_1$.</div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Menyusun persamaan dari dua titik</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tentukan rumus fungsi linear yang melalui $(1,3)$ dan $(4,9)$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">hitung kemiringan</span>
+                <p>$m=\dfrac{9-3}{4-1}=\dfrac{6}{3}=2$</p>
+              </li>
+              <li>
+                <span class="step-label">pakai satu titik untuk mencari $c$</span>
+                <p>Substitusi $(1,3)$ ke $y=2x+c$:</p>
+                <p>$3=2(1)+c$</p>
+                <p>$c=1$</p>
+              </li>
+              <li>
+                <span class="step-label">periksa dengan titik kedua</span>
+                <p>$f(4)=2(4)+1=9$ ✓</p>
+              </li>
+            </ol>
+            <span class="answer">$f(x)=2x+1$</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Membaca arti kemiringan</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tarif parkir mengikuti $f(t)=3000t+2000$, dengan $t$ dalam jam dan $f(t)$ dalam rupiah. Jelaskan arti setiap angka.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">baca $c=2000$</span>
+                <p>Biaya masuk di jam ke-$0$ adalah Rp2.000. Ini biaya tetap, tidak bergantung lama parkir.</p>
+              </li>
+              <li>
+                <span class="step-label">baca $m=3000$</span>
+                <p>Setiap tambahan satu jam dikenakan Rp3.000.</p>
+              </li>
+              <li>
+                <span class="step-label">uji dengan angka</span>
+                <p>$f(0)=2000$, $f(1)=5000$, $f(3)=11000$.</p>
+              </li>
+            </ol>
+            <span class="answer">Biaya tetap Rp2.000 ditambah Rp3.000 per jam.</span>
+          </div>
+        </div>
+
+        <h3>Tiga kasus khusus</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Bentuk</th><th>Grafik</th><th>Catatan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$f(x)=mx$ dengan $c=0$</td><td>garis lewat titik asal</td><td>proporsional: naik dua kali lipat input, naik dua kali lipat output</td></tr>
+              <tr><td>$f(x)=c$ dengan $m=0$</td><td>garis horizontal</td><td>disebut fungsi konstan; range-nya hanya satu nilai</td></tr>
+              <tr><td>$x=k$</td><td>garis vertikal</td><td><strong>bukan fungsi</strong>, karena satu $x$ punya banyak $y$</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>Menukar $\Delta x$ dan $\Delta y$.</strong> Kemiringan adalah “naik dibagi kanan”, bukan “kanan dibagi naik”. Kalau hasilnya terasa aneh — misalnya jalan mendatar jadi sangat curam — periksa urutannya.</p>
+          <p><strong>Mengira $m$ negatif berarti grafiknya “salah”.</strong> Tidak. $m$ negatif hanya berarti garis turun dari kiri ke kanan.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Tentukan kemiringan garis melalui $(2,1)$ dan $(6,9)$.</p>
+            <p style="color:var(--green)">$m=\dfrac{9-1}{6-2}=\dfrac{8}{4}=2$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> $f(x)=-2x+5$. Naik atau turun? Berapa $f(3)$?</p>
+            <p style="color:var(--green)">Turun karena $m=-2&lt;0$. $f(3)=-2(3)+5=-1$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> Apakah $x=4$ adalah fungsi?</p>
+            <p style="color:var(--green)">Bukan fungsi $y$ terhadap $x$. Satu nilai $x$ punya tak hingga nilai $y$.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 06</h3>
+          <ul>
+            <li>$f(x)=mx+c$: $m$ kemiringan, $c$ titik potong sumbu $y$.</li>
+            <li>$m=\dfrac{y_2-y_1}{x_2-x_1}$ — perubahan $y$ dibagi perubahan $x$.</li>
+            <li>Domain dan range fungsi linear (dengan $m\neq 0$) adalah $\mathbb{R}$.</li>
+            <li>$m=0$ memberi garis horizontal; garis vertikal bukan fungsi.</li>
+            <li>Linear cocok untuk segala hal yang berubah dengan laju tetap.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="06" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
+      <nav class="nextprev" aria-label="Navigasi halaman">
+        <a class="np" href="dasar.html#grafik">
+          <span>sebelumnya</span>
+          <b>Bagian 05 · Grafik &amp; uji garis vertikal</b>
+        </a>
+        <a class="np next" href="#kuadrat">
+          <span>selanjutnya</span>
+          <b>Bagian 07 · Fungsi kuadrat</b>
+        </a>
+      </nav>
+
+    </div>
+  </div>
+</main>
+
+<footer class="shell">
+  <div class="foot">
+    <span>materi-fungsi · bab 02</span>
+    <span><a href="https://github.com/voltakyy/materi-fungsi">sumber di GitHub</a></span>
+  </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/app.js"></script>
+</body>
+</html>
