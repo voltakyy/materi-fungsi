@@ -56,6 +56,7 @@
         <li><a href="#rasional" data-for="08"><span class="n">08</span><span>Fungsi rasional</span></a></li>
         <li><a href="#akar" data-for="09"><span class="n">09</span><span>Fungsi akar</span></a></li>
         <li><a href="#mutlak" data-for="10"><span class="n">10</span><span>Nilai mutlak</span></a></li>
+        <li><a href="#sepotong" data-for="11"><span class="n">11</span><span>Fungsi sepotong</span></a></li>
       </ol>
       <p class="rail-note">Enam bentuk yang paling sering muncul. Setiap bentuk punya ciri grafik dan jebakannya sendiri.</p>
     </aside>
@@ -1134,14 +1135,223 @@
 
       </section>
 
+      <section class="sec" id="sepotong" data-lesson="11">
+
+        <div class="sec-head">
+          <span class="sec-no">11</span>
+          <div>
+            <h2>Fungsi sepotong</h2>
+            <p class="sec-sub">Satu fungsi, beberapa rumus. Yang berubah hanya wilayah berlakunya.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Fungsi sepotong memilih rumus berdasarkan <em>di mana</em> input berada. Tetap satu fungsi, selama setiap input hanya masuk ke satu aturan.</p>
+        </div>
+
+        <p>Semua fungsi yang kita bahas sejauh ini memakai satu rumus untuk seluruh domain. Fungsi sepotong (piecewise) melonggarkan itu: rumusnya boleh berbeda di wilayah yang berbeda.</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>bentuk umum</span><span>fungsi sepotong</span></div>
+          <div class="formula-body">$f(x)=\begin{cases}f_1(x), & x\in D_1\\[2pt]f_2(x), & x\in D_2\\[2pt]\vdots & \vdots\end{cases}$</div>
+          <div class="formula-foot">Syaratnya: setiap $x$ di domain masuk ke <strong>tepat satu</strong> wilayah. Kalau ada wilayah yang tumpang tindih, fungsi bisa bercabang — dan itu melanggar aturan dasar.</div>
+        </div>
+
+        <p>Nilai mutlak yang kita bahas di bagian 10 sebenarnya adalah fungsi sepotong:</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>contoh yang sudah dikenal</span><span>nilai mutlak</span></div>
+          <div class="formula-body">$|x|=\begin{cases}x, & x\ge0\\[2pt]-x, & x<0\end{cases}$</div>
+        </div>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 520 360" role="img" aria-labelledby="pwTitle pwDesc">
+              <title id="pwTitle">Grafik fungsi sepotong dengan lompatan di x sama dengan satu</title>
+              <desc id="pwDesc">Parabola untuk x kurang dari satu berakhir dengan titik kosong, lalu garis naik mulai dari titik penuh di x sama dengan satu.</desc>
+              <defs>
+                <pattern id="g11" width="25" height="25" patternUnits="userSpaceOnUse">
+                  <path d="M25 0H0v25" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                </pattern>
+              </defs>
+              <rect width="520" height="360" fill="#f7f6f0"/>
+              <rect width="520" height="360" fill="url(#g11)"/>
+
+              <line x1="60" y1="300" x2="500" y2="300" stroke="#16212c" stroke-width="1"/>
+              <line x1="260" y1="40" x2="260" y2="340" stroke="#16212c" stroke-width="1"/>
+              <path d="M500 300l-8-4v8ZM260 40l-4 8h8Z" fill="#16212c"/>
+
+              <polyline points="160,100 210,250 260,300 310,250"
+                        fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+              <circle cx="310" cy="250" r="5" fill="#f7f6f0" stroke="#1f4e79" stroke-width="2"/>
+
+              <polyline points="310,200 360,150 410,100 460,50"
+                        fill="none" stroke="#b03a26" stroke-width="2.2"/>
+              <circle cx="310" cy="200" r="5" fill="#b03a26"/>
+
+              <g font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">
+                <text x="492" y="316">x</text>
+                <text x="270" y="50">y</text>
+                <text x="304" y="320">1</text>
+              </g>
+              <text x="176" y="92" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#1f4e79">y = x²</text>
+              <text x="380" y="140" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#b03a26">y = x + 1</text>
+              <text x="322" y="196" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#b03a26">(1, 2) ikut</text>
+              <text x="322" y="266" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="#1f4e79">(1, 1) tidak ikut</text>
+            </svg>
+          </div>
+          <figcaption><b>Titik penuh ikut, titik kosong tidak.</b> Di $x=1$ fungsinya melompat dari $1$ ke $2$. Lompatan itu sah — fungsi tidak harus menyambung.</figcaption>
+        </figure>
+
+        <p>Perhatikan grafik di atas: di $x=1$, ada dua titik yang berdekatan. Titik $(1,1)$ <strong>kosong</strong> karena rumus $x^2$ hanya berlaku untuk $x&lt;1$. Titik $(1,2)$ <strong>penuh</strong> karena rumus $x+1$ berlaku untuk $x\ge1$. Jadi $f(1)=2$, bukan $1$.</p>
+
+        <h3>Menghitung nilai fungsi sepotong</h3>
+
+        <p>Kuncinya satu: <strong>periksa wilayah dulu, baru pilih rumus</strong>. Jangan langsung substitusi ke rumus yang paling atas.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Empat nilai, dua rumus</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=\begin{cases}x^2, & x&lt;1\\ x+1, & x\ge1\end{cases}$. Hitung $f(0)$, $f(1)$, $f(3)$, dan $f(-2)$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">$x=0$ masuk wilayah mana?</span>
+                <p>$0&lt;1$, jadi pakai $x^2$: $f(0)=0$.</p>
+              </li>
+              <li>
+                <span class="step-label">$x=1$ — perhatikan tanda sama dengan</span>
+                <p>$1\ge1$, jadi pakai $x+1$: $f(1)=2$.</p>
+              </li>
+              <li>
+                <span class="step-label">$x=3$</span>
+                <p>$3\ge1$: $f(3)=4$.</p>
+              </li>
+              <li>
+                <span class="step-label">$x=-2$</span>
+                <p>$-2&lt;1$: $f(-2)=(-2)^2=4$.</p>
+              </li>
+            </ol>
+            <span class="answer">$f(0)=0,\quad f(1)=2,\quad f(3)=4,\quad f(-2)=4$</span>
+          </div>
+        </div>
+
+        <h3>Domain dan range</h3>
+
+        <p>Domain fungsi sepotong adalah <strong>gabungan semua wilayah</strong>. Range adalah gabungan semua nilai yang dihasilkan tiap potongan — dan hasilnya boleh terputus-putus.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Range yang terputus</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tentukan domain dan range $f(x)=\begin{cases}x^2, & x&lt;1\\ x+1, & x\ge1\end{cases}$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">domain</span>
+                <p>Wilayah pertama $x&lt;1$, wilayah kedua $x\ge1$. Gabungannya menutup semua bilangan real.</p>
+                <p>$D_f=\mathbb{R}$.</p>
+              </li>
+              <li>
+                <span class="step-label">range potongan pertama</span>
+                <p>$x^2$ untuk $x&lt;1$ menghasilkan $[0,1)$. Nilai $1$ tidak termasuk karena $x=1$ tidak dipakai di sini.</p>
+              </li>
+              <li>
+                <span class="step-label">range potongan kedua</span>
+                <p>$x+1$ untuk $x\ge1$ menghasilkan $[2,\infty)$.</p>
+              </li>
+              <li>
+                <span class="step-label">gabungkan</span>
+                <p>Antara $1$ dan $2$ tidak ada nilai yang tercapai — itulah lompatannya.</p>
+              </li>
+            </ol>
+            <span class="answer">$R_f=[0,1)\cup[2,\infty)$</span>
+          </div>
+        </div>
+
+        <h3>Contoh nyata: tarif bertingkat</h3>
+
+        <p>Fungsi sepotong paling sering muncul di soal cerita karena banyak aturan nyata memang bertingkat.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 3</span>
+            <strong>Tarif parkir</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Parkir Rp5.000 untuk 3 jam pertama, lalu Rp3.000 per jam berikutnya. Tulis fungsinya untuk $t$ jam.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">tentukan wilayah</span>
+                <p>$0&lt;t\le3$ dan $t&gt;3$.</p>
+              </li>
+              <li>
+                <span class="step-label">tulis potongan pertama</span>
+                <p>Untuk $0&lt;t\le3$: $f(t)=5000$.</p>
+              </li>
+              <li>
+                <span class="step-label">tulis potongan kedua</span>
+                <p>Untuk $t&gt;3$: $f(t)=5000+3000(t-3)$.</p>
+              </li>
+              <li>
+                <span class="step-label">uji satu nilai</span>
+                <p>$t=5$: $5000+3000(2)=11000$.</p>
+              </li>
+            </ol>
+            <span class="answer">$f(t)=\begin{cases}5000, & 0&lt;t\le3\\ 5000+3000(t-3), & t&gt;3\end{cases}$</span>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>Dua wilayah memuat titik yang sama.</strong> Menulis $x\le1$ di potongan pertama dan $x\ge1$ di potongan kedua membuat $x=1$ punya dua nilai. Selalu pastikan hanya satu yang memakai tanda “sama dengan”.</p>
+          <p><strong>Lupa memeriksa wilayah sebelum substitusi.</strong> Ini penyebab utama jawaban salah, bukan aljabarnya.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> $f(x)=\begin{cases}2x, & x&lt;0\\ x^2, & x\ge0\end{cases}$. Hitung $f(-1)$ dan $f(0)$.</p>
+            <p style="color:var(--green)">$f(-1)=2(-1)=-2$; $f(0)=0^2=0$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> Mengapa $|x|$ disebut fungsi sepotong?</p>
+            <p style="color:var(--green)">Karena rumusnya berbeda untuk $x\ge0$ dan $x&lt;0$: $x$ dan $-x$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> Apakah fungsi sepotong harus menyambung di batas wilayah?</p>
+            <p style="color:var(--green)">Tidak. Lompatan diperbolehkan; yang tidak boleh adalah satu input punya dua output.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 11</h3>
+          <ul>
+            <li>Fungsi sepotong memakai rumus berbeda di wilayah berbeda.</li>
+            <li>Setiap input harus masuk tepat satu wilayah — tidak boleh tumpang tindih.</li>
+            <li>Hitung nilai: tentukan wilayah dulu, baru substitusi.</li>
+            <li>Domain = gabungan wilayah; range = gabungan hasil tiap potongan.</li>
+            <li>Titik penuh ikut, titik kosong tidak. Lompatan sah.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="11" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="#akar">
+        <a class="np" href="#mutlak">
           <span>sebelumnya</span>
-          <b>Bagian 09 · Fungsi akar</b>
+          <b>Bagian 10 · Nilai mutlak</b>
         </a>
-        <a class="np next" href="#sepotong">
-          <span>selanjutnya</span>
-          <b>Bagian 11 · Fungsi sepotong</b>
+        <a class="np next" href="lanjut.html">
+          <span>lanjut ke bab 03</span>
+          <b>Membalik dan menggabung</b>
         </a>
       </nav>
 
