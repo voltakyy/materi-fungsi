@@ -52,6 +52,7 @@
       <p class="rail-title">Bab 02 · Bentuk</p>
       <ol>
         <li><a href="#linear" data-for="06"><span class="n">06</span><span>Fungsi linear</span></a></li>
+        <li><a href="#kuadrat" data-for="07"><span class="n">07</span><span>Fungsi kuadrat</span></a></li>
       </ol>
       <p class="rail-note">Enam bentuk yang paling sering muncul. Setiap bentuk punya ciri grafik dan jebakannya sendiri.</p>
     </aside>
@@ -252,14 +253,238 @@
 
       </section>
 
+      <section class="sec" id="kuadrat" data-lesson="07">
+
+        <div class="sec-head">
+          <span class="sec-no">07</span>
+          <div>
+            <h2>Fungsi kuadrat</h2>
+            <p class="sec-sub">Parabola: satu titik puncak, satu sumbu simetri, dua kemungkinan arah.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Kuadrat itu <em>lengkungan</em>. Semua pertanyaan tentangnya bermuara ke satu titik: puncaknya di mana, dan terbuka ke arah mana.</p>
+        </div>
+
+        <p>Fungsi kuadrat adalah fungsi berderajat dua:</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>bentuk umum</span><span>fungsi kuadrat</span></div>
+          <div class="formula-body">$f(x)=ax^2+bx+c,\qquad a\neq 0$</div>
+          <div class="formula-foot">Kalau $a=0$, suku $x^2$ hilang dan fungsinya berubah jadi linear. Karena itu $a\neq0$ wajib.</div>
+        </div>
+
+        <p>Grafiknya selalu parabola. Hanya ada dua kemungkinan arah: terbuka ke atas kalau $a&gt;0$, terbuka ke bawah kalau $a&lt;0$. Tidak ada parabola yang terbuka ke samping selama kita membicarakan $y$ sebagai fungsi dari $x$.</p>
+
+        <h3>Titik puncak: kunci semua jawaban</h3>
+
+        <p>Puncak parabola adalah titik terendah (kalau terbuka ke atas) atau titik tertinggi (kalau terbuka ke bawah). Koordinat $x$-nya selalu:</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>rumus</span><span>sumbu simetri</span></div>
+          <div class="formula-body">$x_p=-\dfrac{b}{2a}$</div>
+          <div class="formula-foot">Nilai $y$ puncaknya didapat dengan memasukkan $x_p$ ke rumus fungsi. Garis $x=x_p$ adalah sumbu simetri: parabola kiri dan kanan adalah cerminan.</div>
+        </div>
+
+        <p>Rumus itu bukan hafalan ajaib. Ia berasal dari melengkapi kuadrat, dan itu sebabnya hasilnya selalu di tengah-tengah antara dua akar (kalau akarnya ada).</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Membedah satu parabola secara lengkap</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Untuk $f(x)=x^2-6x+5$, tentukan arah terbuka, titik puncak, sumbu simetri, titik potong sumbu $x$, dan range.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">arah terbuka</span>
+                <p>$a=1&gt;0$, jadi parabola terbuka ke atas dan punya nilai minimum.</p>
+              </li>
+              <li>
+                <span class="step-label">cari $x$ puncak</span>
+                <p>$x_p=-\dfrac{-6}{2(1)}=3$</p>
+              </li>
+              <li>
+                <span class="step-label">cari $y$ puncak</span>
+                <p>$f(3)=3^2-6(3)+5=9-18+5=-4$</p>
+                <p>Puncak: $(3,-4)$.</p>
+              </li>
+              <li>
+                <span class="step-label">cari titik potong sumbu $x$</span>
+                <p>$x^2-6x+5=0$</p>
+                <p>$(x-1)(x-5)=0$</p>
+                <p>$x=1$ atau $x=5$.</p>
+              </li>
+              <li>
+                <span class="step-label">tentukan range</span>
+                <p>Nilai terkecil adalah $-4$ (di puncak), dan tidak ada batas atas.</p>
+              </li>
+            </ol>
+            <span class="answer">$D_f=\mathbb{R},\qquad R_f=[-4,\infty)$</span>
+          </div>
+        </div>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 480 460" role="img" aria-labelledby="parTitle parDesc">
+              <title id="parTitle">Parabola f x sama dengan x kuadrat minus 6x plus 5</title>
+              <desc id="parDesc">Parabola terbuka ke atas dengan puncak di tiga koma negatif empat, memotong sumbu x di satu dan lima.</desc>
+              <defs>
+                <pattern id="g7" width="25" height="25" patternUnits="userSpaceOnUse">
+                  <path d="M25 0H0v25" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                </pattern>
+              </defs>
+              <rect width="480" height="460" fill="#f7f6f0"/>
+              <rect width="480" height="460" fill="url(#g7)"/>
+
+              <line x1="20" y1="300" x2="460" y2="300" stroke="#16212c" stroke-width="1.1"/>
+              <line x1="60" y1="50" x2="60" y2="440" stroke="#16212c" stroke-width="1.1"/>
+              <path d="M460 300l-8-4v8ZM60 50l-4 8h8Z" fill="#16212c"/>
+
+              <line x1="210" y1="70" x2="210" y2="450" stroke="#55636f" stroke-width="1" stroke-dasharray="5 5"/>
+
+              <polyline points="60,140 110,300 160,396 210,428 260,396 310,300 360,140"
+                        fill="none" stroke="#1f4e79" stroke-width="2.2"/>
+
+              <circle cx="210" cy="428" r="5" fill="#b03a26"/>
+              <circle cx="110" cy="300" r="4.5" fill="#1f4e79"/>
+              <circle cx="310" cy="300" r="4.5" fill="#1f4e79"/>
+
+              <g font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">
+                <text x="452" y="316">x</text>
+                <text x="70" y="60">y</text>
+                <text x="104" y="318">1</text>
+                <text x="304" y="318">5</text>
+                <text x="216" y="70">x = 3</text>
+              </g>
+              <g font-family="'IBM Plex Mono',monospace" font-size="9" fill="#b03a26">
+                <text x="222" y="440">(3, −4)</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption><b>Semua informasi dalam satu gambar.</b> Puncak $(3,-4)$ memberi range; dua titik potong $x=1$ dan $x=5$ memberi akar; garis putus-putus $x=3$ adalah sumbu simetri.</figcaption>
+        </figure>
+
+        <h3>Tiga bentuk penulisan</h3>
+
+        <p>Parabola yang sama bisa ditulis dengan tiga cara. Masing-masing menonjolkan informasi yang berbeda — pilih yang paling cocok dengan pertanyaannya.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Bentuk</th><th>Rumus</th><th>Langsung memberi</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Standar</strong></td><td>$ax^2+bx+c$</td><td>titik potong sumbu $y$ di $c$</td></tr>
+              <tr><td><strong>Puncak</strong></td><td>$a(x-h)^2+k$</td><td>puncak $(h,k)$ tanpa menghitung</td></tr>
+              <tr><td><strong>Faktor</strong></td><td>$a(x-r_1)(x-r_2)$</td><td>akar $r_1$ dan $r_2$ langsung terlihat</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Mengubah standar ke bentuk puncak disebut <strong>melengkapi kuadrat</strong>. Prosedurnya: keluarkan $a$ dari dua suku pertama, tambahkan dan kurangkan kuadrat setengah koefisien $x$, lalu rapikan.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Melengkapi kuadrat dengan $a\neq 1$</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Ubah $f(x)=2x^2-8x+3$ ke bentuk puncak, lalu tentukan range-nya.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">keluarkan $a=2$ dari dua suku pertama</span>
+                <p>$f(x)=2(x^2-4x)+3$</p>
+              </li>
+              <li>
+                <span class="step-label">lengkapi kuadrat di dalam kurung</span>
+                <p>$x^2-4x=(x-2)^2-4$</p>
+                <p>$f(x)=2\big((x-2)^2-4\big)+3$</p>
+              </li>
+              <li>
+                <span class="step-label">jabarkan kembali</span>
+                <p>$f(x)=2(x-2)^2-8+3$</p>
+                <p>$f(x)=2(x-2)^2-5$</p>
+              </li>
+              <li>
+                <span class="step-label">baca puncak dan arah</span>
+                <p>Puncak $(2,-5)$. Karena $a=2&gt;0$, parabola terbuka ke atas.</p>
+              </li>
+            </ol>
+            <span class="answer">$f(x)=2(x-2)^2-5,\qquad R_f=[-5,\infty)$</span>
+          </div>
+        </div>
+
+        <h3>Akar dan diskriminan</h3>
+
+        <p>Titik potong sumbu $x$ adalah solusi $ax^2+bx+c=0$. Banyaknya solusi nyata ditentukan oleh diskriminan $D=b^2-4ac$.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Diskriminan</th><th>Arti pada grafik</th><th>Jumlah akar nyata</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$D&gt;0$</td><td>parabola memotong sumbu $x$ di dua titik</td><td>dua akar berbeda</td></tr>
+              <tr><td>$D=0$</td><td>parabola menyinggung sumbu $x$ di puncak</td><td>satu akar (kembar)</td></tr>
+              <tr><td>$D&lt;0$</td><td>parabola tidak menyentuh sumbu $x$</td><td>tidak ada akar nyata</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <span class="note-label">hubungan dengan range</span>
+          <p>Kalau $D&lt;0$ dan $a&gt;0$, parabola seluruhnya di atas sumbu $x$. Artinya range-nya tidak memuat $0$, misalnya $[2,\infty)$. Ini cara cepat memeriksa apakah jawaban range-mu masuk akal.</p>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>Menukar $x$ dan $y$ puncak.</strong> $x_p=-\frac{b}{2a}$ memberi posisi <em>horizontal</em>. Untuk mendapat $y$, substitusikan $x_p$ ke rumus. Menulis puncak sebagai $(-4,3)$ padahal seharusnya $(3,-4)$ adalah kesalahan yang sangat sering terjadi.</p>
+          <p><strong>Mengira puncak selalu nilai minimum.</strong> Kalau $a&lt;0$, puncak adalah nilai <em>maksimum</em> dan range-nya $(-\infty,k]$.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Tentukan puncak $f(x)=x^2+4x+1$.</p>
+            <p style="color:var(--green)">$x_p=-\frac{4}{2}=-2$. $f(-2)=4-8+1=-3$. Puncak $(-2,-3)$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> $f(x)=-x^2+2x+3$. Berapa nilai maksimumnya?</p>
+            <p style="color:var(--green)">$x_p=-\frac{2}{2(-1)}=1$. $f(1)=-1+2+3=4$. Maksimum $4$, range $(-\infty,4]$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> $f(x)=x^2+2x+5$. Berapa akar nyatanya?</p>
+            <p style="color:var(--green)">$D=4-20=-16&lt;0$, jadi tidak ada akar nyata. Parabola tidak menyentuh sumbu $x$.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 07</h3>
+          <ul>
+            <li>$f(x)=ax^2+bx+c$ dengan $a\neq0$; grafiknya parabola.</li>
+            <li>$a&gt;0$ terbuka ke atas (punya minimum), $a&lt;0$ terbuka ke bawah (punya maksimum).</li>
+            <li>Puncak di $x=-\frac{b}{2a}$; substitusikan untuk mendapat $y$-nya.</li>
+            <li>Bentuk puncak $a(x-h)^2+k$ memberi puncak $(h,k)$ langsung.</li>
+            <li>Diskriminan $D=b^2-4ac$ menentukan jumlah titik potong sumbu $x$.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="07" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="dasar.html#grafik">
+        <a class="np" href="#linear">
           <span>sebelumnya</span>
-          <b>Bagian 05 · Grafik &amp; uji garis vertikal</b>
+          <b>Bagian 06 · Fungsi linear</b>
         </a>
-        <a class="np next" href="#kuadrat">
+        <a class="np next" href="#rasional">
           <span>selanjutnya</span>
-          <b>Bagian 07 · Fungsi kuadrat</b>
+          <b>Bagian 08 · Fungsi rasional</b>
         </a>
       </nav>
 
