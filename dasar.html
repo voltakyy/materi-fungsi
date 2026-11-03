@@ -53,6 +53,7 @@
       <ol>
         <li><a href="#definisi" data-for="01"><span class="n">01</span><span>Definisi &amp; notasi</span></a></li>
         <li><a href="#domain" data-for="02"><span class="n">02</span><span>Domain, kodomain, range</span></a></li>
+        <li><a href="#bukan-fungsi" data-for="03"><span class="n">03</span><span>Kapan bukan fungsi</span></a></li>
       </ol>
       <p class="rail-note">Baca berurutan. Tiap bagian ditutup contoh dan satu cek pemahaman singkat.</p>
     </aside>
@@ -731,14 +732,207 @@
 
       </section>
 
+      <section class="sec" id="bukan-fungsi" data-lesson="03">
+
+        <div class="sec-head">
+          <span class="sec-no">03</span>
+          <div>
+            <h2>Kapan relasi bukan fungsi</h2>
+            <p class="sec-sub">Dua cara sebuah aturan gagal, dan cara menyelamatkannya.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Bukan fungsi bukan berarti salah. Hanya berarti aturannya <em>bercabang</em>, atau ada input yang <em>tidak kebagian</em>.</p>
+        </div>
+
+        <p>Setiap fungsi adalah relasi, tapi tidak setiap relasi adalah fungsi. Relasi hanya kumpulan pasangan; fungsi menambahkan dua janji tadi. Jadi untuk memeriksa, kamu tidak perlu melihat rumusnya — cukup lihat pasangan input–output yang benar-benar terjadi.</p>
+
+        <h3>Dua jenis pelanggaran</h3>
+
+        <div class="grid-2">
+          <div class="panel">
+            <span class="chip chip-red">pelanggaran A</span>
+            <h3 style="margin:10px 0 8px">Input bercabang</h3>
+            <p style="font-size:.94rem;color:var(--muted);margin:0 0 10px">Satu input menghasilkan dua output berbeda.</p>
+            <p style="font-family:var(--mono);font-size:.82rem;margin:0">$(1,a)$ dan $(1,b)$</p>
+            <p style="font-size:.86rem;color:var(--muted);margin:10px 0 0">Contoh nyata: “akar dari”. $9$ punya dua akar, yaitu $3$ dan $-3$.</p>
+          </div>
+          <div class="panel">
+            <span class="chip chip-red">pelanggaran B</span>
+            <h3 style="margin:10px 0 8px">Input yatim</h3>
+            <p style="font-size:.94rem;color:var(--muted);margin:0 0 10px">Ada anggota domain yang tidak punya pasangan sama sekali.</p>
+            <p style="font-family:var(--mono);font-size:.82rem;margin:0">domain $\{1,2,3\}$, tetapi $2$ tidak muncul</p>
+            <p style="font-size:.86rem;color:var(--muted);margin:10px 0 0">Contoh nyata: “NIM → mahasiswa” kalau ada NIM yang belum terdaftar.</p>
+          </div>
+        </div>
+
+        <p>Perhatikan bahwa pelanggaran B hanya muncul kalau <strong>domain sudah ditetapkan</strong>. Relasi $\{(1,a),(3,c)\}$ bisa jadi fungsi dari $\{1,3\}$ ke $\{a,c\}$, tapi bukan fungsi dari $\{1,2,3\}$. Jadi pertanyaan “fungsi atau bukan” selalu relatif terhadap domain yang dipilih.</p>
+
+        <h3>Contoh yang sering menjebak: persamaan</h3>
+
+        <p>Persamaan seperti $x^2+y^2=25$ terlihat rapi, tapi belum tentu mendefinisikan $y$ sebagai fungsi dari $x$. Yang menentukan adalah: untuk satu nilai $x$, berapa nilai $y$ yang mungkin?</p>
+
+        <div class="fig-row">
+          <figure class="fig">
+            <div class="fig-frame">
+              <svg viewBox="0 0 340 340" role="img" aria-labelledby="circleTitle circleDesc">
+                <title id="circleTitle">Lingkaran x kuadrat plus y kuadrat sama dengan 25 dipotong garis x sama dengan 3</title>
+                <desc id="circleDesc">Garis vertikal di x sama dengan 3 memotong lingkaran di dua titik, yaitu y sama dengan 4 dan y sama dengan negatif 4.</desc>
+                <defs>
+                  <pattern id="g3" width="22" height="22" patternUnits="userSpaceOnUse">
+                    <path d="M22 0H0v22" fill="none" stroke="#1f4e79" stroke-opacity=".07"/>
+                  </pattern>
+                </defs>
+                <rect width="340" height="340" fill="#f7f6f0"/>
+                <rect width="340" height="340" fill="url(#g3)"/>
+
+                <line x1="26" y1="170" x2="316" y2="170" stroke="#16212c" stroke-width="1.1"/>
+                <line x1="170" y1="26" x2="170" y2="316" stroke="#16212c" stroke-width="1.1"/>
+                <path d="M316 170l-8-4v8ZM170 26l-4 8h8Z" fill="#16212c"/>
+
+                <circle cx="170" cy="170" r="110" fill="none" stroke="#1f4e79" stroke-width="1.7"/>
+
+                <line x1="236" y1="58" x2="236" y2="282" stroke="#b03a26" stroke-width="1.2" stroke-dasharray="4 4"/>
+
+                <circle cx="236" cy="82" r="4.5" fill="#b03a26"/>
+                <circle cx="236" cy="258" r="4.5" fill="#b03a26"/>
+
+                <g font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">
+                  <text x="308" y="186">x</text>
+                  <text x="180" y="36">y</text>
+                  <text x="240" y="196">3</text>
+                </g>
+                <g font-family="'Newsreader',serif" font-size="13" font-style="italic" fill="#b03a26">
+                  <text x="248" y="76">y = 4</text>
+                  <text x="248" y="272">y = −4</text>
+                </g>
+              </svg>
+            </div>
+            <figcaption><b>Bukan fungsi.</b> Di $x=3$, ada dua nilai $y$ yang memenuhi: $4$ dan $-4$. Satu input, dua output.</figcaption>
+          </figure>
+
+          <figure class="fig">
+            <div class="fig-frame">
+              <svg viewBox="0 0 340 340" role="img" aria-labelledby="halfTitle halfDesc">
+                <title id="halfTitle">Setengah lingkaran atas sebagai fungsi</title>
+                <desc id="halfDesc">Hanya busur atas yang diambil, sehingga setiap x punya satu nilai y.</desc>
+                <rect width="340" height="340" fill="#f7f6f0"/>
+                <rect width="340" height="340" fill="url(#g3)"/>
+
+                <line x1="26" y1="170" x2="316" y2="170" stroke="#16212c" stroke-width="1.1"/>
+                <line x1="170" y1="26" x2="170" y2="316" stroke="#16212c" stroke-width="1.1"/>
+                <path d="M316 170l-8-4v8ZM170 26l-4 8h8Z" fill="#16212c"/>
+
+                <path d="M60 170A110 110 0 0 1 280 170" fill="none" stroke="#1f4e79" stroke-width="2"/>
+                <circle cx="60" cy="170" r="3.5" fill="#1f4e79"/>
+                <circle cx="280" cy="170" r="3.5" fill="#1f4e79"/>
+
+                <g font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">
+                  <text x="308" y="186">x</text>
+                  <text x="180" y="36">y</text>
+                  <text x="52" y="188">−5</text>
+                  <text x="272" y="188">5</text>
+                </g>
+                <text x="170" y="300" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#2f6b4f">y = √(25 − x²)</text>
+              </svg>
+            </div>
+            <figcaption><b>Bisa diselamatkan.</b> Ambil hanya busur atas, dan hasilnya jadi fungsi: setiap $x\in[-5,5]$ punya tepat satu $y$.</figcaption>
+          </figure>
+        </div>
+
+        <p>Inilah yang disebut <strong>membatasi domain</strong> atau mengambil satu cabang. Persamaan aslinya tidak berubah; yang berubah adalah aturan pemilihannya. Banyak fungsi invers nanti lahir dari cara berpikir ini.</p>
+
+        <h3>Klasifikasi cepat</h3>
+
+        <p>Gunakan tabel berikut sebagai pola pikir. Perhatikan bahwa bentuk rumus tidak menentukan; yang menentukan adalah perilaku pasangannya.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Relasi</th><th>Fungsi?</th><th>Alasan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$y=2x+1$</td><td><strong style="color:var(--green)">ya</strong></td><td>tiap $x$ menghasilkan satu $y$</td></tr>
+              <tr><td>$y=x^2$</td><td><strong style="color:var(--green)">ya</strong></td><td>$x=2$ dan $x=-2$ sama-sama memberi $4$, tapi itu dua input berbeda</td></tr>
+              <tr><td>$y^2=x$</td><td><strong style="color:var(--red)">tidak</strong></td><td>$x=4$ memberi $y=2$ dan $y=-2$</td></tr>
+              <tr><td>$x^2+y^2=25$</td><td><strong style="color:var(--red)">tidak</strong></td><td>lingkaran: satu $x$ bisa dua $y$</td></tr>
+              <tr><td>$x=3$</td><td><strong style="color:var(--red)">tidak</strong></td><td>satu $x$ dengan tak hingga $y$</td></tr>
+              <tr><td>$y=|x|$</td><td><strong style="color:var(--green)">ya</strong></td><td>hasilnya selalu tunggal</td></tr>
+              <tr><td>tabel $x$: 1, 2, 2, 3</td><td><strong style="color:var(--red)">tidak</strong></td><td>$x=2$ muncul dua kali dengan $y$ berbeda</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh</span>
+            <strong>Memeriksa tabel dengan teliti</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Apakah tabel berikut mendefinisikan $y$ sebagai fungsi dari $x$?</p>
+            <div class="table-wrap" style="margin:12px 0">
+              <table style="min-width:0">
+                <thead><tr><th>$x$</th><th>−1</th><th>0</th><th>1</th><th>1</th><th>2</th></tr></thead>
+                <tbody><tr><td><strong>$y$</strong></td><td>3</td><td>0</td><td>2</td><td>5</td><td>3</td></tr></tbody>
+              </table>
+            </div>
+            <ol class="steps">
+              <li><span class="step-label">cari $x$ yang berulang</span><p>$x=1$ muncul dua kali.</p></li>
+              <li><span class="step-label">bandingkan hasilnya</span><p>Saat $x=1$, $y=2$; saat $x=1$ lagi, $y=5$.</p></li>
+              <li><span class="step-label">simpulkan</span><p>Dua hasil berbeda untuk input yang sama — bukan fungsi.</p></li>
+            </ol>
+            <span class="answer">Bukan fungsi, karena $f(1)$ tidak punya nilai tunggal.</span>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>“Ada dua titik dengan $y$ sama, berarti bukan fungsi.”</strong> Salah. Yang dilarang adalah dua titik dengan <em>$x$ sama</em> dan $y$ berbeda. Pada $y=x^2$, titik $(2,4)$ dan $(-2,4)$ punya $y$ sama, tapi $x$-nya berbeda — tetap fungsi.</p>
+          <p><strong>“Rumus selalu berarti fungsi.”</strong> $y^2=x$ adalah rumus, tapi bukan fungsi $y$ terhadap $x$.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Relasi $\{(2,5),(3,5),(4,5)\}$ dari $\{2,3,4\}$ ke $\{5\}$. Fungsi?</p>
+            <p style="color:var(--green)">Ya. Semua input muncul tepat sekali; output boleh sama semua.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> Apakah $y^2=x+1$ mendefinisikan $y$ sebagai fungsi dari $x$?</p>
+            <p style="color:var(--green)">Tidak. Untuk $x=3$, $y^2=4$ sehingga $y=2$ atau $y=-2$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> Bagaimana membuat $y^2=x+1$ menjadi fungsi?</p>
+            <p style="color:var(--green)">Ambil satu cabang, misalnya $y=\sqrt{x+1}$ dengan domain $x\ge -1$. Cabang bawah $y=-\sqrt{x+1}$ juga fungsi, tapi keduanya tidak boleh digabung.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 03</h3>
+          <ul>
+            <li>Sebuah relasi gagal jadi fungsi karena <strong>input bercabang</strong> atau <strong>input yatim</strong>.</li>
+            <li>Pemeriksaan selalu relatif terhadap domain yang dipilih.</li>
+            <li>Persamaan seperti $x^2+y^2=25$ bukan fungsi $y$ terhadap $x$, karena satu $x$ bisa memberi dua $y$.</li>
+            <li>Relasi yang gagal bisa diselamatkan dengan membatasi domain atau mengambil satu cabang.</li>
+            <li>Dua titik dengan $y$ sama tidak melanggar apa pun; yang melanggar adalah dua titik dengan $x$ sama.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="03" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="#definisi">
+        <a class="np" href="#domain">
           <span>sebelumnya</span>
-          <b>Bagian 01 · Definisi &amp; notasi</b>
+          <b>Bagian 02 · Domain, kodomain, range</b>
         </a>
-        <a class="np next" href="#bukan-fungsi">
+        <a class="np next" href="#substitusi">
           <span>selanjutnya</span>
-          <b>Bagian 03 · Kapan relasi bukan fungsi</b>
+          <b>Bagian 04 · Notasi &amp; substitusi</b>
         </a>
       </nav>
 
