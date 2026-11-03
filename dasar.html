@@ -54,6 +54,7 @@
         <li><a href="#definisi" data-for="01"><span class="n">01</span><span>Definisi &amp; notasi</span></a></li>
         <li><a href="#domain" data-for="02"><span class="n">02</span><span>Domain, kodomain, range</span></a></li>
         <li><a href="#bukan-fungsi" data-for="03"><span class="n">03</span><span>Kapan bukan fungsi</span></a></li>
+        <li><a href="#substitusi" data-for="04"><span class="n">04</span><span>Notasi &amp; substitusi</span></a></li>
       </ol>
       <p class="rail-note">Baca berurutan. Tiap bagian ditutup contoh dan satu cek pemahaman singkat.</p>
     </aside>
@@ -925,14 +926,183 @@
 
       </section>
 
+      <section class="sec" id="substitusi" data-lesson="04">
+
+        <div class="sec-head">
+          <span class="sec-no">04</span>
+          <div>
+            <h2>Notasi dan substitusi</h2>
+            <p class="sec-sub">$x$ hanyalah kotak kosong. Mengisi kotak itu dengan benar menyelesaikan separuh soal fungsi.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>$f(x)$ bukan perkalian. $x$ adalah <em>tempat kosong</em>, dan apa pun yang kamu masukkan ke situ harus masuk ke <em>semua</em> tempat yang sama.</p>
+        </div>
+
+        <p>Anggap rumus fungsi sebagai kalimat dengan satu lubang. Kalau $f(x)=2x+1$, maka kalimatnya adalah “dua kali <span style="border-bottom:2px solid var(--red);padding:0 12px"> </span> ditambah satu”. Lubang itu bisa diisi angka, huruf lain, atau bahkan seluruh ekspresi.</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>pola pengisian</span><span>satu lubang, banyak isi</span></div>
+          <div class="formula-body">$f(\,\square\,)=2(\,\square\,)+1$</div>
+          <div class="formula-foot">Isi kotak dengan $3$ → $f(3)=7$. Isi dengan $t$ → $f(t)=2t+1$. Isi dengan $x+1$ → $f(x+1)=2(x+1)+1$.</div>
+        </div>
+
+        <p>Karena itu, $f(x)=2x+1$ dan $f(t)=2t+1$ adalah fungsi yang <strong>sama persis</strong>. Nama variabelnya hanya label; yang penting aturannya. Matematikawan menyebutnya variabel dummy — variabel yang namanya tidak berpengaruh.</p>
+
+        <h3>Mengisi dengan ekspresi</h3>
+
+        <p>Di sinilah kebanyakan orang kehilangan poin. Kalau isinya lebih dari satu suku, ekspresi itu harus diberi tanda kurung sebelum dikalikan.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Substitusi ekspresi</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=2x+1$. Tentukan $f(x+1)$ dan $f(3t-1)$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">tulis ulang rumus dengan kotak</span>
+                <p>$f(\square)=2(\square)+1$</p>
+              </li>
+              <li>
+                <span class="step-label">isi kotak dengan $x+1$ — pakai kurung</span>
+                <p>$f(x+1)=2(x+1)+1$</p>
+                <p>$=2x+2+1$</p>
+                <p>$=2x+3$</p>
+              </li>
+              <li>
+                <span class="step-label">isi kotak dengan $3t-1$</span>
+                <p>$f(3t-1)=2(3t-1)+1$</p>
+                <p>$=6t-2+1$</p>
+                <p>$=6t-1$</p>
+              </li>
+            </ol>
+            <span class="answer">$f(x+1)=2x+3,\qquad f(3t-1)=6t-1$</span>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>$f(x+1)\neq f(x)+1$.</strong> Untuk $f(x)=2x+1$: $f(x)+1=2x+2$, sedangkan $f(x+1)=2x+3$. Bukan hanya angkanya yang berbeda — artinya juga berbeda: $f(x)+1$ menambah hasil, $f(x+1)$ menggeser input.</p>
+          <p><strong>$f(a+b)\neq f(a)+f(b)$.</strong> Hampir semua fungsi biasa tidak “membagi” penjumlahan seperti itu. Kalau kamu memakainya, kamu sedang mengarang aturan baru.</p>
+        </div>
+
+        <h3>Dari hasil kembali ke input</h3>
+
+        <p>Soal juga sering dibalik: yang diketahui hasilnya, yang ditanya inputnya. Ini disebut mencari <strong>prapeta</strong>, dan caranya cuma menyelesaikan persamaan.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Mencari $x$ jika $f(x)$ diketahui</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=2x+1$. Jika $f(x)=7$, berapa $x$?</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">terjemahkan kalimatnya jadi persamaan</span>
+                <p>$2x+1=7$</p>
+              </li>
+              <li>
+                <span class="step-label">kurangi kedua ruas dengan $1$</span>
+                <p>$2x=6$</p>
+              </li>
+              <li>
+                <span class="step-label">bagi kedua ruas dengan $2$</span>
+                <p>$x=3$</p>
+              </li>
+              <li>
+                <span class="step-label">periksa kembali</span>
+                <p>$f(3)=2(3)+1=7$ ✓</p>
+              </li>
+            </ol>
+            <span class="answer">$x=3$</span>
+          </div>
+        </div>
+
+        <h3>Substitusi yang lebih berat: $f(x+h)$</h3>
+
+        <p>Bentuk $f(x+h)$ muncul terus di kalkulus, khususnya saat menghitung turunan. Kuncinya sama: ganti setiap $x$ dengan $(x+h)$, lalu jabarkan dengan sabar.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 3</span>
+            <strong>Menjabarkan $f(x+h)$</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=x^2$. Tentukan $f(x+h)$, lalu sederhanakan $f(x+h)-f(x)$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">ganti $x$ dengan $(x+h)$</span>
+                <p>$f(x+h)=(x+h)^2$</p>
+              </li>
+              <li>
+                <span class="step-label">jabarkan, jangan lupa suku tengah</span>
+                <p>$(x+h)^2=x^2+2xh+h^2$</p>
+              </li>
+              <li>
+                <span class="step-label">kurangkan $f(x)=x^2$</span>
+                <p>$f(x+h)-f(x)=(x^2+2xh+h^2)-x^2$</p>
+                <p>$=2xh+h^2$</p>
+              </li>
+              <li>
+                <span class="step-label">faktorkan $h$</span>
+                <p>$=h(2x+h)$</p>
+              </li>
+            </ol>
+            <span class="answer">$f(x+h)-f(x)=h(2x+h)$</span>
+            <p style="margin-top:14px;font-size:.92rem;color:var(--muted)">Kalau nanti kamu membagi dengan $h$ lalu mengambil $h\to 0$, hasilnya $2x$ — turunan dari $x^2$. Tapi itu cerita bab lain. Yang penting sekarang: substitusi dan penjabarannya sudah benar.</p>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note-label">urutan yang aman</span>
+          <p>Selalu kerjakan dengan urutan ini: <strong>(1)</strong> tulis rumus dengan kotak, <strong>(2)</strong> isi kotak memakai tanda kurung, <strong>(3)</strong> baru jabarkan, <strong>(4)</strong> sederhanakan. Melompat ke langkah 4 adalah penyebab utama kesalahan tanda.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> $f(x)=x^2-3$. Hitung $f(-2)$.</p>
+            <p style="color:var(--green)">$f(-2)=(-2)^2-3=4-3=1$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> $f(x)=x^2-3$. Tentukan $f(a+1)$.</p>
+            <p style="color:var(--green)">$f(a+1)=(a+1)^2-3=a^2+2a+1-3=a^2+2a-2$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> $f(x)=3x-2$. Jika $f(x)=10$, berapa $x$?</p>
+            <p style="color:var(--green)">$3x-2=10 \Rightarrow 3x=12 \Rightarrow x=4$.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 04</h3>
+          <ul>
+            <li>$f(x)$ berarti “$f$ dari $x$”; $x$ adalah tempat kosong, bukan faktor.</li>
+            <li>Nama variabel bebas boleh diganti: $f(x)$ dan $f(t)$ bisa jadi fungsi yang sama.</li>
+            <li>Saat mengisi ekspresi, bungkus dengan kurung: $2(x+1)$, bukan $2x+1$.</li>
+            <li>$f(x+1)$ menggeser input; $f(x)+1$ menambah output. Dua hal berbeda.</li>
+            <li>Mencari input dari output = menyelesaikan persamaan, lalu memeriksa kembali.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="04" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="#domain">
+        <a class="np" href="#bukan-fungsi">
           <span>sebelumnya</span>
-          <b>Bagian 02 · Domain, kodomain, range</b>
+          <b>Bagian 03 · Kapan relasi bukan fungsi</b>
         </a>
-        <a class="np next" href="#substitusi">
+        <a class="np next" href="#grafik">
           <span>selanjutnya</span>
-          <b>Bagian 04 · Notasi &amp; substitusi</b>
+          <b>Bagian 05 · Grafik &amp; uji garis vertikal</b>
         </a>
       </nav>
 
