@@ -53,6 +53,7 @@
       <ol>
         <li><a href="#jenis" data-for="12"><span class="n">12</span><span>Injektif, surjektif, bijektif</span></a></li>
         <li><a href="#invers" data-for="13"><span class="n">13</span><span>Fungsi invers</span></a></li>
+        <li><a href="#komposisi" data-for="14"><span class="n">14</span><span>Komposisi fungsi</span></a></li>
       </ol>
       <p class="rail-note">Empat bagian terakhir. Di sini fungsi mulai dibalik dan digabung — dua operasi yang paling sering keluar di ujian.</p>
     </aside>
@@ -564,14 +565,309 @@
 
       </section>
 
+      <section class="sec" id="komposisi" data-lesson="14">
+
+        <div class="sec-head">
+          <span class="sec-no">14</span>
+          <div>
+            <h2>Komposisi fungsi</h2>
+            <p class="sec-sub">Menyambung dua mesin jadi satu, dan mengapa urutannya tidak boleh ditukar.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>$(f\\circ g)(x)=f\\big(g(x)\\big)$ berarti <em>$g$ dulu, baru $f$</em>. Yang paling dekat dengan $x$ dikerjakan lebih awal.</p>
+        </div>
+
+        <p>Kalau dua fungsi punya tipe input–output yang cocok, keduanya bisa disambung. Output dari fungsi pertama langsung menjadi input fungsi kedua. Proses menyambung inilah yang disebut <strong>komposisi</strong>.</p>
+
+        <p>Analogi paling jelas: dua mesin yang dirangkai. Masukkan $x$ ke mesin $g$, hasilnya $g(x)$ langsung masuk ke mesin $f$, keluar $f(g(x))$. Tidak ada yang berhenti di tengah.</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>notasi</span><span>komposisi dua fungsi</span></div>
+          <div class="formula-body">$(f\\circ g)(x)=f\\big(g(x)\\big)$</div>
+          <div class="formula-foot">Dibaca “$f$ bundaran $g$” atau “$f$ setelah $g$”. Simbol $\\circ$ bukan perkalian dan bukan titik — ia penanda komposisi.</div>
+        </div>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 740 260" role="img" aria-labelledby="compTitle compDesc">
+              <title id="compTitle">Diagram alur komposisi: x masuk ke g, hasilnya masuk ke f</title>
+              <desc id="compDesc">Panah dari x menuju kotak g, lalu ke nilai antara g(x), lalu ke kotak f, dan keluar sebagai f dari g x.</desc>
+              <defs>
+                <pattern id="g14" width="22" height="22" patternUnits="userSpaceOnUse">
+                  <path d="M22 0H0v22" fill="none" stroke="#1f4e79" stroke-opacity=".05"/>
+                </pattern>
+                <marker id="ar14" markerWidth="10" markerHeight="10" refX="8" refY="3.2" orient="auto">
+                  <path d="M0 0l6.4 3.2L0 6.4Z" fill="#1f4e79"/>
+                </marker>
+              </defs>
+              <rect width="740" height="260" fill="#f7f6f0"/>
+              <rect width="740" height="260" fill="url(#g14)"/>
+
+              <circle cx="52" cy="110" r="20" fill="#fffefa" stroke="#16212c" stroke-width="1.4"/>
+              <text x="52" y="116" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="17" fill="#16212c">x</text>
+
+              <path d="M74 110H124" fill="none" stroke="#1f4e79" stroke-width="1.6" marker-end="url(#ar14)"/>
+
+              <rect x="128" y="80" width="104" height="60" rx="4" fill="#fffefa" stroke="#1f4e79" stroke-width="1.6"/>
+              <text x="180" y="118" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="24" fill="#1f4e79">g</text>
+              <text x="180" y="158" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" letter-spacing="1" fill="#55636f">MESIN 1</text>
+
+              <path d="M234 110H292" fill="none" stroke="#1f4e79" stroke-width="1.6" marker-end="url(#ar14)"/>
+
+              <circle cx="322" cy="110" r="26" fill="#b03a26" fill-opacity=".07" stroke="#b03a26" stroke-width="1.3"/>
+              <text x="322" y="116" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="17" fill="#b03a26">g(x)</text>
+              <text x="322" y="158" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" letter-spacing="1" fill="#55636f">NILAI ANTARA</text>
+
+              <path d="M350 110H404" fill="none" stroke="#1f4e79" stroke-width="1.6" marker-end="url(#ar14)"/>
+
+              <rect x="408" y="80" width="104" height="60" rx="4" fill="#fffefa" stroke="#1f4e79" stroke-width="1.6"/>
+              <text x="460" y="118" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="24" fill="#1f4e79">f</text>
+              <text x="460" y="158" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" letter-spacing="1" fill="#55636f">MESIN 2</text>
+
+              <path d="M514 110H566" fill="none" stroke="#1f4e79" stroke-width="1.6" marker-end="url(#ar14)"/>
+
+              <circle cx="596" cy="110" r="26" fill="#fffefa" stroke="#2f6b4f" stroke-width="1.4"/>
+              <text x="596" y="116" text-anchor="middle" font-family="'Newsreader',serif" font-style="italic" font-size="15" fill="#2f6b4f">f(g(x))</text>
+              <text x="596" y="158" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8.5" letter-spacing="1" fill="#55636f">HASIL</text>
+
+              <text x="180" y="212" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">dikerjakan lebih dulu</text>
+              <text x="460" y="212" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">dikerjakan belakangan</text>
+              <text x="370" y="240" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9.5" fill="#b03a26">alur mengalir ke kanan · notasi dibaca dari kanan</text>
+            </svg>
+          </div>
+          <figcaption><b>Satu alur, dua mesin.</b> $x$ masuk ke $g$ lebih dulu karena $g$ menempel langsung pada $x$ di dalam kurung. Hasil antara $g(x)$ kemudian menjadi bahan mentah bagi $f$.</figcaption>
+        </figure>
+
+        <h3>Menghitung komposisi: dua cara</h3>
+
+        <p>Ada dua rute yang sah, dan keduanya harus memberi jawaban sama. Rute pertama menghitung dari dalam ke luar; rute kedua menyusun rumusnya dulu.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Nilai pada satu titik</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=x^2+1$ dan $g(x)=3x$. Hitung $(f\\circ g)(2)$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">rute 1 — hitung dari dalam</span>
+                <p>$g(2)=3(2)=6$</p>
+                <p>Lalu masukkan $6$ ke $f$:</p>
+                <p>$f(6)=6^2+1=37$</p>
+              </li>
+              <li>
+                <span class="step-label">rute 2 — susun rumus dulu</span>
+                <p>$(f\\circ g)(x)=f(3x)=(3x)^2+1=9x^2+1$</p>
+                <p>$(f\\circ g)(2)=9(4)+1=37$ ✓</p>
+              </li>
+            </ol>
+            <span class="answer">$(f\\circ g)(2)=37$</span>
+            <p style="margin-top:14px;font-size:.92rem;color:var(--muted)">Rute 1 lebih aman untuk satu titik; rute 2 lebih berguna kalau kamu butuh rumus umumnya.</p>
+          </div>
+        </div>
+
+        <h3>Urutan tidak boleh ditukar</h3>
+
+        <p>Ini perbedaan terbesar antara komposisi dan perkalian. Untuk perkalian, $2\\times3=3\\times2$. Untuk komposisi, belum tentu.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>$f\\circ g$ versus $g\\circ f$</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Dengan $f(x)=x^2$ dan $g(x)=x+1$, tentukan $(f\\circ g)(x)$ dan $(g\\circ f)(x)$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">$(f\\circ g)(x)$ — $g$ dulu</span>
+                <p>$f\\big(g(x)\\big)=f(x+1)=(x+1)^2$</p>
+                <p>$=x^2+2x+1$</p>
+              </li>
+              <li>
+                <span class="step-label">$(g\\circ f)(x)$ — $f$ dulu</span>
+                <p>$g\\big(f(x)\\big)=g(x^2)=x^2+1$</p>
+              </li>
+              <li>
+                <span class="step-label">bandingkan</span>
+                <p>$x^2+2x+1$ dan $x^2+1$ jelas berbeda. Uji $x=1$: hasilnya $4$ versus $2$.</p>
+              </li>
+            </ol>
+            <span class="answer">$(f\\circ g)(x)=x^2+2x+1,\\qquad (g\\circ f)(x)=x^2+1$</span>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Bentuk</th><th>Arti</th><th>Contoh dengan $f=x^2$, $g=x+1$</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$(f\\circ g)(x)$</td><td>$g$ dulu, lalu $f$</td><td>$(x+1)^2$</td></tr>
+              <tr><td>$(g\\circ f)(x)$</td><td>$f$ dulu, lalu $g$</td><td>$x^2+1$</td></tr>
+              <tr><td>$f(x)\\cdot g(x)$</td><td>hasil keduanya dikalikan</td><td>$x^2(x+1)=x^3+x^2$</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Tiga baris itu sering tertukar karena semuanya memakai huruf $f$ dan $g$. Bedanya: komposisi <strong>menyambung</strong>, perkalian <strong>mengalikan hasil</strong>.</p>
+
+        <h3>Domain komposisi: dua syarat, bukan satu</h3>
+
+        <p>Ini bagian yang paling sering dilewati. Untuk $(f\\circ g)(x)$ sah, ada dua hal yang harus benar:</p>
+
+        <ol class="steps">
+          <li>
+            <span class="step-label">syarat 1</span>
+            <p>$x$ harus boleh masuk ke $g$: yaitu $x\\in D_g$.</p>
+          </li>
+          <li>
+            <span class="step-label">syarat 2</span>
+            <p>Hasil $g(x)$ harus boleh masuk ke $f$: yaitu $g(x)\\in D_f$.</p>
+          </li>
+        </ol>
+
+        <p>Kalau salah satu gagal, komposisinya tidak terdefinisi di titik itu — walaupun rumus gabungannya terlihat baik-baik saja.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 3</span>
+            <strong>Domain yang berubah karena urutan</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=\\sqrt{x}$ dan $g(x)=x-3$. Tentukan $(f\\circ g)(x)$ dan $(g\\circ f)(x)$ beserta domainnya.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">$(f\\circ g)(x)$: $g$ dulu</span>
+                <p>$f\\big(g(x)\\big)=\\sqrt{x-3}$</p>
+                <p>Syarat isi akar: $x-3\\ge0 \\Rightarrow x\\ge3$.</p>
+                <p>Domain: $[3,\\infty)$.</p>
+              </li>
+              <li>
+                <span class="step-label">$(g\\circ f)(x)$: $f$ dulu</span>
+                <p>$g\\big(f(x)\\big)=\\sqrt{x}-3$</p>
+                <p>Syarat akar: $x\\ge0$. Tidak ada syarat tambahan, karena $\\sqrt{x}-3$ boleh bernilai apa saja.</p>
+                <p>Domain: $[0,\\infty)$.</p>
+              </li>
+              <li>
+                <span class="step-label">bandingkan domainnya</span>
+                <p>Domainnya berbeda, jadi kedua komposisi itu memang fungsi yang berbeda.</p>
+              </li>
+            </ol>
+            <span class="answer">$(f\\circ g)(x)=\\sqrt{x-3}$, $D=[3,\\infty)$; &nbsp; $(g\\circ f)(x)=\\sqrt{x}-3$, $D=[0,\\infty)$</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 4</span>
+            <strong>Domain yang justru menyempit</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=\\dfrac{1}{x}$ dan $g(x)=x-2$. Tentukan $(f\\circ g)(x)$ dan domainnya.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">susun rumusnya</span>
+                <p>$(f\\circ g)(x)=f(x-2)=\\dfrac{1}{x-2}$</p>
+              </li>
+              <li>
+                <span class="step-label">periksa domain $g$</span>
+                <p>$g$ linear, jadi semua $x$ boleh.</p>
+              </li>
+              <li>
+                <span class="step-label">periksa syarat masuk ke $f$</span>
+                <p>$f$ menolak input $0$. Jadi $g(x)\\neq0$, yaitu $x-2\\neq0 \\Rightarrow x\\neq2$.</p>
+              </li>
+            </ol>
+            <span class="answer">$(f\\circ g)(x)=\\dfrac{1}{x-2},\\qquad D=\\mathbb{R}\\setminus\\{2\\}$</span>
+          </div>
+        </div>
+
+        <div class="note">
+          <span class="note-label">contoh yang menyenangkan</span>
+          <p>Kalau $f(x)=\\sqrt{x}$ dan $g(x)=x^2$, maka $(f\\circ g)(x)=\\sqrt{x^2}=|x|$, dengan domain $\\mathbb{R}$. Perhatikan bahwa hasilnya bukan $x$, melainkan $|x|$ — persis seperti yang dibahas di bagian 10. Inilah alasan $\\sqrt{x^2}=|x|$ bukan sekadar formalitas.</p>
+        </div>
+
+        <h3>Membongkar fungsi menjadi komposisi</h3>
+
+        <p>Soal juga sering berjalan sebaliknya: diberi satu fungsi rumit, diminta menuliskannya sebagai $f\\circ g$. Tidak ada jawaban tunggal — yang penting hasilnya benar.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 5</span>
+            <strong>Mengurai $h(x)=\\sqrt{2x+5}$</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tulis $h(x)=\\sqrt{2x+5}$ sebagai komposisi dua fungsi.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">lihat bagian “luar”</span>
+                <p>Operasi terakhir yang dikerjakan adalah akar kuadrat. Jadi $f(u)=\\sqrt{u}$.</p>
+              </li>
+              <li>
+                <span class="step-label">lihat bagian “dalam”</span>
+                <p>Isi akarnya adalah $2x+5$. Jadi $g(x)=2x+5$.</p>
+              </li>
+              <li>
+                <span class="step-label">periksa</span>
+                <p>$f\\big(g(x)\\big)=\\sqrt{2x+5}$ ✓</p>
+              </li>
+            </ol>
+            <span class="answer">$h=f\\circ g$ dengan $f(u)=\\sqrt{u}$ dan $g(x)=2x+5$</span>
+            <p style="margin-top:14px;font-size:.92rem;color:var(--muted)">Pilihan lain juga sah, misalnya $f(u)=\\sqrt{u+5}$ dan $g(x)=2x$. Yang penting hasil sambungannya sama.</p>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>$(f\\circ g)(x)$ dianggap $f(x)\\cdot g(x)$.</strong> Simbol $\\circ$ bukan titik perkalian. Untuk $f(x)=x^2$ dan $g(x)=x+1$: komposisinya $(x+1)^2$, sedangkan perkaliannya $x^3+x^2$.</p>
+          <p><strong>Mengerjakan dari kiri.</strong> $(f\\circ g)(x)$ berarti $f(g(x))$ — $g$ lebih dulu. Menukar urutan menghasilkan fungsi yang berbeda.</p>
+          <p><strong>Lupa memeriksa domain fungsi dalam.</strong> Rumus gabungan bisa terlihat mulus, padahal ada titik yang sebenarnya tidak boleh masuk sejak langkah pertama.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> $f(x)=x+3$, $g(x)=2x$. Hitung $(f\\circ g)(4)$.</p>
+            <p style="color:var(--green)">$g(4)=8$, lalu $f(8)=11$. Jadi $(f\\circ g)(4)=11$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> Dengan fungsi yang sama, apakah $(f\\circ g)(x)=(g\\circ f)(x)$?</p>
+            <p style="color:var(--green)">Tidak. $(f\\circ g)(x)=2x+3$, sedangkan $(g\\circ f)(x)=2(x+3)=2x+6$.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> $f(x)=\\sqrt{x}$, $g(x)=x-4$. Tentukan domain $(f\\circ g)$.</p>
+            <p style="color:var(--green)">$(f\\circ g)(x)=\\sqrt{x-4}$, butuh $x-4\\ge0$. Domain $[4,\\infty)$.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 14</h3>
+          <ul>
+            <li>$(f\\circ g)(x)=f(g(x))$: kerjakan $g$ lebih dulu, lalu $f$.</li>
+            <li>Umumnya $f\\circ g\\neq g\\circ f$ — urutan mengubah hasil.</li>
+            <li>$(f\\circ g)(x)$ bukan $f(x)\\cdot g(x)$.</li>
+            <li>Domain komposisi butuh dua syarat: $x\\in D_g$ dan $g(x)\\in D_f$.</li>
+            <li>Mengurai fungsi: bagian luar jadi $f$, bagian dalam jadi $g$.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="14" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="#jenis">
+        <a class="np" href="#invers">
           <span>sebelumnya</span>
-          <b>Bagian 12 · Injektif, surjektif, bijektif</b>
+          <b>Bagian 13 · Fungsi invers</b>
         </a>
-        <a class="np next" href="#komposisi">
+        <a class="np next" href="#sifat">
           <span>selanjutnya</span>
-          <b>Bagian 14 · Komposisi fungsi</b>
+          <b>Bagian 15 · Genap, ganjil, monoton</b>
         </a>
       </nav>
 
