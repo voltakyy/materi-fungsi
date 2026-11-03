@@ -52,6 +52,7 @@
       <p class="rail-title">Bab 03 · Lanjut</p>
       <ol>
         <li><a href="#jenis" data-for="12"><span class="n">12</span><span>Injektif, surjektif, bijektif</span></a></li>
+        <li><a href="#invers" data-for="13"><span class="n">13</span><span>Fungsi invers</span></a></li>
       </ol>
       <p class="rail-note">Empat bagian terakhir. Di sini fungsi mulai dibalik dan digabung — dua operasi yang paling sering keluar di ujian.</p>
     </aside>
@@ -321,14 +322,256 @@
 
       </section>
 
+      <section class="sec" id="invers" data-lesson="13">
+
+        <div class="sec-head">
+          <span class="sec-no">13</span>
+          <div>
+            <h2>Fungsi invers</h2>
+            <p class="sec-sub">Membalik arah mesin: dari output kembali ke input.</p>
+          </div>
+        </div>
+
+        <div class="inti">
+          <span class="kicker">satu kalimat inti</span>
+          <p>Invers adalah <em>fungsi pembatal</em>. Kalau $f$ mengubah $x$ menjadi $y$, maka $f^{-1}$ mengubah $y$ kembali menjadi $x$.</p>
+        </div>
+
+        <p>Bayangkan mesin yang menerima angka, mengalikannya dengan $2$, lalu menambah $1$. Kalau kamu memasukkan $3$, keluar $7$. Sekarang bayangkan mesin kedua yang menerima $7$ dan mengembalikannya menjadi $3$. Mesin kedua itulah inversnya.</p>
+
+        <p>Supaya bisa dibalik, mesin pertama harus <strong>tidak pernah menghasilkan output yang sama untuk dua input berbeda</strong>. Kalau dua input berbeda memberi output sama, mesin pembalik tidak akan tahu harus kembali ke yang mana. Inilah alasan invers hanya ada untuk fungsi <strong>bijektif</strong> — injektif supaya arah baliknya tidak ambigu, surjektif supaya semua output punya jalan pulang.</p>
+
+        <div class="panel" style="margin:22px 0">
+          <p style="margin:0 0 10px"><strong>Definisi.</strong> Jika $f:A\to B$ bijektif, maka inversnya $f^{-1}:B\to A$ memenuhi dua syarat sekaligus:</p>
+          <p style="margin:0 0 6px;text-align:center">$f^{-1}\\big(f(x)\\big)=x$ &nbsp;untuk setiap $x\\in A$</p>
+          <p style="margin:0;text-align:center">$f\\big(f^{-1}(y)\\big)=y$ &nbsp;untuk setiap $y\\in B$</p>
+        </div>
+
+        <p>Dua persamaan itu bukan hiasan. Keduanya adalah <strong>alat periksa</strong>: setelah menemukan calon invers, masukkan kembali dan lihat apakah hasilnya $x$ lagi.</p>
+
+        <h3>Prosedur mencari $f^{-1}(x)$</h3>
+
+        <p>Urutannya selalu sama, dan jangan dibalik:</p>
+
+        <ol class="steps">
+          <li>
+            <span class="step-label">tulis $y=f(x)$</span>
+            <p>Ganti nama output menjadi $y$, supaya kita punya persamaan biasa dengan dua variabel.</p>
+          </li>
+          <li>
+            <span class="step-label">tukar posisi $x$ dan $y$</span>
+            <p>Sekarang $x$ berperan sebagai output dan $y$ sebagai input. Inilah inti “membalik arah”.</p>
+          </li>
+          <li>
+            <span class="step-label">selesaikan untuk $y$</span>
+            <p>Gunakan aljabar biasa sampai $y$ berdiri sendiri di satu ruas.</p>
+          </li>
+          <li>
+            <span class="step-label">ganti $y$ dengan $f^{-1}(x)$</span>
+            <p>Hasilnya adalah rumus invers. Periksa dengan $f(f^{-1}(x))=x$.</p>
+          </li>
+        </ol>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 1</span>
+            <strong>Invers fungsi linear</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Tentukan invers dari $f(x)=2x+1$.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">tulis sebagai $y$</span>
+                <p>$y=2x+1$</p>
+              </li>
+              <li>
+                <span class="step-label">tukar $x$ dan $y$</span>
+                <p>$x=2y+1$</p>
+              </li>
+              <li>
+                <span class="step-label">kurangi $1$</span>
+                <p>$x-1=2y$</p>
+              </li>
+              <li>
+                <span class="step-label">bagi dengan $2$</span>
+                <p>$y=\\dfrac{x-1}{2}$</p>
+              </li>
+              <li>
+                <span class="step-label">periksa</span>
+                <p>$f\\left(\\dfrac{x-1}{2}\\right)$</p>
+                <p>$=2\\cdot\\dfrac{x-1}{2}+1$</p>
+                <p>$=(x-1)+1=x$ ✓</p>
+              </li>
+            </ol>
+            <span class="answer">$f^{-1}(x)=\\dfrac{x-1}{2}$</span>
+          </div>
+        </div>
+
+        <div class="trap">
+          <span class="trap-label">sering keliru</span>
+          <p><strong>$f^{-1}(x)$ bukan $\\dfrac{1}{f(x)}$.</strong> Untuk $f(x)=2x+1$: inversnya $\\dfrac{x-1}{2}$, sedangkan kebalikannya $\\dfrac{1}{2x+1}$. Dua benda yang sama sekali berbeda. Bilangan $-1$ pada $f^{-1}$ adalah <em>tanda invers fungsi</em>, bukan pangkat.</p>
+          <p><strong>Lupa bahwa tidak semua fungsi punya invers.</strong> $f(x)=x^2$ dari $\\mathbb{R}$ ke $\\mathbb{R}$ tidak punya invers, karena $f(2)=f(-2)=4$. Pembaliknya tidak tahu harus kembali ke $2$ atau $-2$.</p>
+        </div>
+
+        <h3>Kalau tidak bijektif: batasi domainnya</h3>
+
+        <p>Fungsi yang gagal bijektif sering masih bisa diselamatkan. Caranya sama seperti di bagian 03: ambil satu cabang saja. Untuk $f(x)=x^2$, ambil $x\\ge0$.</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="ex-label">contoh 2</span>
+            <strong>Invers dengan domain dibatasi</strong>
+          </div>
+          <div class="example-body">
+            <p class="example-q">Diketahui $f(x)=x^2$ dengan domain $x\\ge0$. Tentukan $f^{-1}$ beserta domain dan range-nya.</p>
+            <ol class="steps">
+              <li>
+                <span class="step-label">pastikan bijektif pada domain itu</span>
+                <p>Untuk $x\\ge0$, $x^2$ selalu naik, jadi injektif. Range-nya $[0,\\infty)$, jadi surjektif ke $[0,\\infty)$. Bijektif ✓</p>
+              </li>
+              <li>
+                <span class="step-label">tulis $y=x^2$, lalu tukar</span>
+                <p>$x=y^2$</p>
+              </li>
+              <li>
+                <span class="step-label">ambil akar — pilih tanda yang sesuai domain</span>
+                <p>$y=\\pm\\sqrt{x}$. Karena domain asal $y\\ge0$, kita ambil yang positif.</p>
+                <p>$y=\\sqrt{x}$</p>
+              </li>
+              <li>
+                <span class="step-label">tukar domain dan range</span>
+                <p>Domain $f$ = $[0,\\infty)$ menjadi range $f^{-1}$. Range $f$ = $[0,\\infty)$ menjadi domain $f^{-1}$.</p>
+              </li>
+            </ol>
+            <span class="answer">$f^{-1}(x)=\\sqrt{x},\\qquad D=[0,\\infty),\\quad R=[0,\\infty)$</span>
+          </div>
+        </div>
+
+        <p>Perhatikan langkah 3: tanda $\\pm$ muncul dari penyelesaian persamaan, lalu <strong>disaring oleh domain</strong>. Tanpa pembatasan domain, tidak ada cara sah memilih salah satu.</p>
+
+        <h3>Grafik: cermin terhadap garis $y=x$</h3>
+
+        <p>Invers menukar peran $x$ dan $y$. Karena itu, grafik $f^{-1}$ adalah <strong>bayangan cermin</strong> grafik $f$ terhadap garis $y=x$.</p>
+
+        <figure class="fig">
+          <div class="fig-frame">
+            <svg viewBox="0 0 480 400" role="img" aria-labelledby="invTitle invDesc">
+              <title id="invTitle">Grafik f x sama dengan 2x plus 1 dan inversnya, dicerminkan terhadap garis y sama dengan x</title>
+              <desc id="invDesc">Dua garis saling mencerminkan terhadap garis putus-putus y sama dengan x. Titik satu koma tiga pada f berpasangan dengan titik tiga koma satu pada inversnya.</desc>
+              <defs>
+                <pattern id="g13" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M20 0H0v20" fill="none" stroke="#1f4e79" stroke-opacity=".06"/>
+                </pattern>
+                <marker id="ar13" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+                  <path d="M0 0l6 3-6 3Z" fill="#16212c"/>
+                </marker>
+              </defs>
+              <rect width="480" height="400" fill="#f7f6f0"/>
+              <rect width="480" height="400" fill="url(#g13)"/>
+
+              <line x1="30" y1="300" x2="460" y2="300" stroke="#16212c" stroke-width="1.1"/>
+              <line x1="200" y1="20" x2="200" y2="380" stroke="#16212c" stroke-width="1.1"/>
+              <path d="M460 300l-8-4v8ZM200 20l-4 8h8Z" fill="#16212c"/>
+              <text x="452" y="316" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">x</text>
+              <text x="210" y="30" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">y</text>
+
+              <line x1="40" y1="360" x2="460" y2="40" stroke="#55636f" stroke-width="1.1" stroke-dasharray="5 5"/>
+              <text x="408" y="72" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#55636f">y = x</text>
+
+              <line x1="150" y1="360" x2="272" y2="116" stroke="#1f4e79" stroke-width="2.2"/>
+              <text x="248" y="112" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#1f4e79">f(x) = 2x + 1</text>
+
+              <line x1="148" y1="362" x2="424" y2="206" stroke="#b03a26" stroke-width="2.2"/>
+              <text x="356" y="200" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#b03a26">f⁻¹(x) = (x − 1)/2</text>
+
+              <line x1="240" y1="180" x2="320" y2="260" stroke="#2f6b4f" stroke-width="1" stroke-dasharray="3 3"/>
+              <circle cx="240" cy="180" r="4.5" fill="#1f4e79"/>
+              <circle cx="320" cy="260" r="4.5" fill="#b03a26"/>
+              <circle cx="160" cy="340" r="5" fill="#2f6b4f"/>
+              <circle cx="280" cy="220" r="3" fill="#2f6b4f"/>
+
+              <g font-family="'IBM Plex Mono',monospace" font-size="8.5">
+                <text x="246" y="174" fill="#1f4e79">(1, 3)</text>
+                <text x="328" y="272" fill="#b03a26">(3, 1)</text>
+                <text x="118" y="356" fill="#2f6b4f">(−1, −1)</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption><b>Cermin $y=x$.</b> Titik $(1,3)$ pada $f$ berpasangan dengan $(3,1)$ pada $f^{-1}$ — koordinatnya bertukar. Kedua grafik bertemu di $(-1,-1)$, yaitu titik yang koordinatnya sama, sehingga tidak berubah saat dicerminkan.</figcaption>
+        </figure>
+
+        <h3>Domain dan range bertukar tempat</h3>
+
+        <p>Karena arahnya dibalik, himpunan input dan output juga bertukar:</p>
+
+        <div class="formula">
+          <div class="formula-head"><span>aturan</span><span>domain–range invers</span></div>
+          <div class="formula-body">$D_{f^{-1}}=R_f\\qquad\\text{dan}\\qquad R_{f^{-1}}=D_f$</div>
+          <div class="formula-foot">Ini bukan hafalan tambahan; ia konsekuensi langsung dari definisi. Apa yang dulu keluar sekarang masuk.</div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>$f(x)$</th><th>Domain $f$</th><th>$f^{-1}(x)$</th><th>Domain $f^{-1}$</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$2x+1$</td><td>$\\mathbb{R}$</td><td>$\\dfrac{x-1}{2}$</td><td>$\\mathbb{R}$</td></tr>
+              <tr><td>$x^2$, $x\\ge0$</td><td>$[0,\\infty)$</td><td>$\\sqrt{x}$</td><td>$[0,\\infty)$</td></tr>
+              <tr><td>$\\sqrt{x-3}$</td><td>$[3,\\infty)$</td><td>$x^2+3$, $x\\ge0$</td><td>$[0,\\infty)$</td></tr>
+              <tr><td>$\\dfrac{1}{x}$</td><td>$\\mathbb{R}\\setminus\\{0\\}$</td><td>$\\dfrac{1}{x}$</td><td>$\\mathbb{R}\\setminus\\{0\\}$</td></tr>
+              <tr><td>$x^3$</td><td>$\\mathbb{R}$</td><td>$\\sqrt[3]{x}$</td><td>$\\mathbb{R}$</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Baris keempat menarik: $f(x)=\\frac1x$ adalah invers dari dirinya sendiri. Cerminnya terhadap $y=x$ jatuh tepat di grafik yang sama. Baris kelima menunjukkan bahwa $x^3$ bijektif di $\\mathbb{R}$, berbeda dari $x^2$.</p>
+
+        <div class="note">
+          <span class="note-label">cara memeriksa cepat</span>
+          <p>Kalau grafik $f$ dan $f^{-1}$ digambar di bidang yang sama, keduanya harus simetris terhadap $y=x$. Kalau tidak simetris, pasti ada kesalahan aljabar di salah satu langkah. Ini pemeriksaan visual yang jarang dipakai, padahal sangat cepat.</p>
+        </div>
+
+        <details class="check">
+          <summary>Cek pemahaman · 3 pertanyaan</summary>
+          <div class="check-body">
+            <p><strong>1.</strong> Tentukan invers $f(x)=3x-6$.</p>
+            <p style="color:var(--green)">$y=3x-6 \\Rightarrow x=3y-6 \\Rightarrow y=\\dfrac{x+6}{3}$. Jadi $f^{-1}(x)=\\dfrac{x}{3}+2$.</p>
+
+            <p style="margin-top:14px"><strong>2.</strong> Mengapa $f(x)=x^2$ dari $\\mathbb{R}$ ke $\\mathbb{R}$ tidak punya invers?</p>
+            <p style="color:var(--green)">Karena tidak injektif: $f(2)=f(-2)=4$. Arah baliknya ambigu.</p>
+
+            <p style="margin-top:14px"><strong>3.</strong> Jika $D_f=[2,\\infty)$ dan $R_f=[5,\\infty)$, sebutkan domain dan range $f^{-1}$.</p>
+            <p style="color:var(--green)">$D_{f^{-1}}=[5,\\infty)$ dan $R_{f^{-1}}=[2,\\infty)$ — bertukar.</p>
+          </div>
+        </details>
+
+        <div class="recap">
+          <h3>Rangkuman bagian 13</h3>
+          <ul>
+            <li>Invers membatalkan fungsi: $f^{-1}(f(x))=x$ dan $f(f^{-1}(y))=y$.</li>
+            <li>Invers hanya ada kalau fungsinya bijektif; kalau tidak, batasi domainnya dulu.</li>
+            <li>Prosedur: $y=f(x)$ → tukar $x$ dan $y$ → selesaikan $y$ → tulis $f^{-1}(x)$.</li>
+            <li>$f^{-1}(x)$ bukan $\\dfrac{1}{f(x)}$.</li>
+            <li>Grafik invers adalah cermin terhadap $y=x$; domain dan range bertukar.</li>
+          </ul>
+        </div>
+
+        <div class="done-row">
+          <button class="btn btn-ghost mark-done" data-done="13" aria-pressed="false"><span>Tandai sudah paham</span></button>
+          <span class="done-note">progres tersimpan di browser ini</span>
+        </div>
+
+      </section>
+
       <nav class="nextprev" aria-label="Navigasi halaman">
-        <a class="np" href="bentuk.html#sepotong">
+        <a class="np" href="#jenis">
           <span>sebelumnya</span>
-          <b>Bagian 11 · Fungsi sepotong</b>
+          <b>Bagian 12 · Injektif, surjektif, bijektif</b>
         </a>
-        <a class="np next" href="#invers">
+        <a class="np next" href="#komposisi">
           <span>selanjutnya</span>
-          <b>Bagian 13 · Fungsi invers</b>
+          <b>Bagian 14 · Komposisi fungsi</b>
         </a>
       </nav>
 
