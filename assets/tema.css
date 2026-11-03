@@ -1100,6 +1100,49 @@ td strong{color:var(--ink)}
 .q-answer[hidden]{display:none}
 .q-answer .steps{margin:0}
 
+.q-group{
+  margin:26px 0 2px;
+  padding-bottom:9px;
+  border-bottom:1px solid var(--line-soft);
+  font-family:var(--mono);
+  font-size:.66rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--faint);
+  scroll-margin-top:88px;
+}
+.q-group:first-child{margin-top:0}
+
+.btn-sm{padding:6px 12px;font-size:.7rem;letter-spacing:.04em}
+
+[data-self="ok"].is-picked{background:var(--green-soft);border-color:rgba(47,107,79,.32);color:var(--green)}
+[data-self="no"].is-picked{background:var(--red-soft);border-color:rgba(176,58,38,.3);color:var(--red-deep)}
+
+.q-card[data-result="ok"]{border-color:rgba(47,107,79,.34)}
+.q-card[data-result="no"]{border-color:rgba(176,58,38,.3)}
+
+.quiz-bar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-top:28px;
+  padding:13px 18px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+}
+.quiz-bar p{margin:0;font-family:var(--mono);font-size:.72rem;letter-spacing:.03em;color:var(--muted)}
+.quiz-bar b{color:var(--ink);font-weight:600}
+
+@media (max-width:560px){
+  .btn-sm{padding:9px 13px}
+  .q-card{padding:17px 16px}
+  .q-tools{gap:7px}
+  .quiz-bar{padding:12px 14px}
+}
+
 /* ---------- tandai selesai ---------- */
 
 .done-row{
