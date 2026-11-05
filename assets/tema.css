@@ -47,12 +47,13 @@
   --rail:224px;
 }
 
-*,*::before,*::after{box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box;min-inline-size:0}
 
 html{
   -webkit-text-size-adjust:100%;
   scroll-behavior:smooth;
   scroll-padding-top:88px;
+  overflow-x:clip;
 }
 
 body{
@@ -72,6 +73,7 @@ body{
   line-height:1.72;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
+  overflow-x:clip;
 }
 
 ::selection{background:#f3d9c8;color:var(--ink)}
@@ -165,6 +167,7 @@ em{font-style:italic}
   max-width:var(--shell);
   margin:0 auto;
   padding:0 26px;
+  overflow-x:clip;
 }
 
 .page{
